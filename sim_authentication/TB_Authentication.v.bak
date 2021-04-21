@@ -10,7 +10,7 @@
 // rst: reset push-button on FPGA board
 // pwdigit: 4-bit integer user inputs via toggle switches as ID or PW.
 // pwenter: push-button when user is finished typing in ID or PW.
-// log_out_ctrl: input from GameController sending pulse when to log out.
+// log_out_ctrl: input from GameController telling when to log out.
 // 
 // WIRE
 // log_in_ctrl: output sent to GameController showing when User is logged in.

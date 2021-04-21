@@ -1,28 +1,29 @@
-C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v {0 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v
+C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/TB_Authentication.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/TB_Authentication.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module PW_Checking
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-2730) Undefined variable: 'matchID'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-13294) Identifier must be declared with a port mode: matchID.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-2730) Undefined variable: 'isGuest'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-13294) Identifier must be declared with a port mode: isGuest.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-2730) Undefined variable: 'intID'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-13294) Identifier must be declared with a port mode: intID.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-2730) Undefined variable: 'log_out_ctrl'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(34): (vlog-13294) Identifier must be declared with a port mode: log_out_ctrl.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-2730) Undefined variable: 'log_out'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-13294) Identifier must be declared with a port mode: log_out.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-2730) Undefined variable: 'isGuest_ctrl'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-13294) Identifier must be declared with a port mode: isGuest_ctrl.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-2730) Undefined variable: 'intID_ctrl'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-13294) Identifier must be declared with a port mode: intID_ctrl.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-2730) Undefined variable: 'log_in_ctrl'.
-** Error: C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v(35): (vlog-13294) Identifier must be declared with a port mode: log_in_ctrl.
-
-} {4.0 20.0} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/Authentication.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/Authentication.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Authentication
+-- Compiling module TB_Authentication
 
 Top level modules:
-	Authentication
+	TB_Authentication
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ROM_TB
+
+Top level modules:
+	ROM_TB
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/UID_ROM.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/UID_ROM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UID_ROM
+
+Top level modules:
+	UID_ROM
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_ROM.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_ROM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PW_ROM
+
+Top level modules:
+	PW_ROM
 
 } {} {}}

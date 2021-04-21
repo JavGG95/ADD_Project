@@ -1,6 +1,7 @@
 // ECE 6370
 // Author: Avish Gandhi, 9989
-// ROM_Authentication Module
+// PW_Checking Module
+//
 // INPUTS
 // clk: internal 50 MHz clock on FPGA Hardware
 // rst: reset physical push-button on FPGA Hardware (inverse logic), 
@@ -9,28 +10,27 @@
 // pwenter: a push-button coming from the button-shaper as a single cycle pulse
 // 	    to enter the typed in password value
 //          afterwords logged in: used to Start the game. 
-// load_p1_in: a push-button coming from the button-shaper as a single cycle pulse
-//	       enters the types in value from player 1's set of switches.
-// load_RNG_in: a push-button, without using a button-shaper,
-// 		enters a random value based on how long user pushed the button
-// timeout: A flag notifying this module when the timer for the game has run out.
+// matchID: if ID is matching, high flag sent from ID to PW Module.
+// isGuest: flag sent from ID Module to PW Module, indicating if using guest ID/PW.
+// intID: 3-bit integer sent from ID Module to PW Module showing which User is playing.
+// log_out_ctrl: 
+// q_PW_ROM: 24-bit (6-digit) Password value grabbed from PW ROM.
+//
 // OUTPUTS
-// logged_in/logged_out: Status if the user has been logged into the system.
-// load_p1_out/load_RNG_out: allows the values to be passed through to other modules when 1.
-// timer_reconfig: tells the timer to reset values back to default values
-// 		   without having to reset the whole board
-// timer_enable: tells the timer when to start counting.
+// log_out: Passthrough from log_in_ctrl, GameController, PW and ID Modules all log out.
+// log_in_ctrl: output sent to GameController showing when User is logged in.
+// isGuest_ctrl: passthrough output sent to GameController showing if it is a guest ID/PW
+// intID_ctrl: 3-bit integer passthrough output sent to GameController showing which User is playing.
+// addr_PW_ROM: 5-bit address sent to PW ROM to fetch for PW
+//
 // REG
-// State: The current state of the finite state machine.
-// Sofarsogood: a flag that keeps checking to see if the user has typed in any
-//		incorrect password values.
+// attempt: 2-bit counter, number of attempts the user has attempted to type in a correct ID
+// count: 2-bit counter, used exclusively after being sent a flag to log out.
+//        waits 4 cycles before going back to INIT state.
+// 
 // HOW TO UNLOCK
-// The user needs to type in password values to log into the system so they can play the game.
-// After the system has been unlocked, the user will be logged in:
-// the logged_in flag will be on and logged_out flag will be off
-// player 1 and RNG inputs will transfer through to other modules allowing to play the game.
-// Note: Currently, the password is set to 9989 in order to test my system.
-// Status: SUCCESSFUL for both Wrong Passwords and Correct Passwords.
+// The user needs to type in a 4-bit Digit followed by the push-button, 6 times.
+// If correct, will enable the log_in_ctrl signal high to enable the GameController.
 module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_ctrl,
                    log_out, isGuest_ctrl, intID_ctrl, log_in_ctrl, 
                    q_PW_ROM, addr_PW_ROM);
@@ -40,10 +40,10 @@ module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_
    input [3:0] pwdigit;
 
    output log_out, isGuest_ctrl, log_in_ctrl;
-   reg log_out, isGuest_ctrl, log_in_ctrl, attempt;
+   reg log_out, isGuest_ctrl, log_in_ctrl;
 
    output [2:0] intID_ctrl;
-   reg [2:0] intID_ctrl, count;
+   reg [2:0] intID_ctrl;
 
    input [23:0] q_PW_ROM;
    reg [23:0] data_PW_ROM, PW;
@@ -56,6 +56,7 @@ module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_
              COMPARE = 11, PASSED = 12, WAIT_LOGOUT = 13;			 
 
    reg [3:0] State;
+   reg [1:0] attempt, count;
 
 always@(posedge clk) begin
    if (rst==1'b0)
@@ -74,15 +75,18 @@ always@(posedge clk) begin
       begin
          case (State)
             INIT: begin
-            addr_PW_ROM<=5'b00000;
-            data_PW_ROM<=24'b0000_0000_0000_0000_0000_0000;
-            PW<= 24'b0000_0000_0000_0000_0000_0000;
-            attempt<= 1'b0;
-            count<=2'b00;
-            log_out<=1'b0;
-            log_in_ctrl<=1'b0;
-            isGuest_ctrl<=1'b0;
-            intID_ctrl<= 2'b00;
+               if(matchID == 1'b1) State <= FIRST;
+               else begin
+                  addr_PW_ROM<=5'b00000;
+                  data_PW_ROM<=24'b0000_0000_0000_0000_0000_0000;
+                  PW<= 24'b0000_0000_0000_0000_0000_0000;
+                  attempt<= 1'b0;
+                  count<=2'b00;
+                  log_out<=1'b0;
+                  log_in_ctrl<=1'b0;
+                  isGuest_ctrl<=1'b0;
+                  intID_ctrl<= 2'b00;
+               end
             end
             FIRST: begin
                if (pwenter==1'b1) begin 
@@ -142,8 +146,11 @@ always@(posedge clk) begin
             end
             COMPARE: begin
                if(PW == data_PW_ROM) State <= PASSED; 
-               else if(attempt > 2'b10) State <= WAIT_LOGOUT;
-               else State <= FIRST;
+               else if(attempt == 2'b10) State <= WAIT_LOGOUT;
+               else begin
+                  attempt <= attempt + 1'b1;
+                  State <= FIRST;
+               end
             end
             PASSED: begin
               if (log_out_ctrl == 1'b1) begin
@@ -155,9 +162,10 @@ always@(posedge clk) begin
                  intID_ctrl<=intID;
                  isGuest_ctrl<=isGuest;
                  State <= PASSED;
+              end
              end
              WAIT_LOGOUT: begin
-                if (count == 2'b11) State <= 2'b11;
+                if (count == 2'b11) State <= INIT;
                 else begin 
                     log_out<=0;
                     log_in_ctrl<=0;
