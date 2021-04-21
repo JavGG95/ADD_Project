@@ -1,0 +1,153 @@
+// ECE 6370
+// Author: Avish Gandhi, 9989
+// ROM_Authentication Module
+// INPUTS
+// clk: internal 50 MHz clock on FPGA Hardware
+// rst: reset physical push-button on FPGA Hardware (inverse logic), 
+// 	reset all values back to default
+// pwdigit: 4-bit user-input from toggle switches to type in the password
+// pwenter: a push-button coming from the button-shaper as a single cycle pulse
+// 	    to enter the typed in password value
+//          afterwords logged in: used to Start the game. 
+// load_p1_in: a push-button coming from the button-shaper as a single cycle pulse
+//	       enters the types in value from player 1's set of switches.
+// load_RNG_in: a push-button, without using a button-shaper,
+// 		enters a random value based on how long user pushed the button
+// timeout: A flag notifying this module when the timer for the game has run out.
+// OUTPUTS
+// logged_in/logged_out: Status if the user has been logged into the system.
+// load_p1_out/load_RNG_out: allows the values to be passed through to other modules when 1.
+// timer_reconfig: tells the timer to reset values back to default values
+// 		   without having to reset the whole board
+// timer_enable: tells the timer when to start counting.
+// REG
+// State: The current state of the finite state machine.
+// Sofarsogood: a flag that keeps checking to see if the user has typed in any
+//		incorrect password values.
+// HOW TO UNLOCK
+// The user needs to type in password values to log into the system so they can play the game.
+// After the system has been unlocked, the user will be logged in:
+// the logged_in flag will be on and logged_out flag will be off
+// player 1 and RNG inputs will transfer through to other modules allowing to play the game.
+// Note: Currently, the password is set to 9989 in order to test my system.
+// Status: SUCCESSFUL for both Wrong Passwords and Correct Passwords.
+module ID_Checking(clk, rst, pwdigit, pwenter, log_out, 
+                        matchID, isGuest, intID,
+                        q_UID_ROM, addr_UID_ROM);
+
+   input  clk, rst, pwenter, log_out;
+   input [3:0] pwdigit;
+
+   output matchID, isGuest;
+   reg matchID, isGuest, attempt;
+
+   output [2:0] intID;
+   reg [2:0] intID;
+
+   input [15:0] q_UID_ROM;
+   reg [15:0] data_UID_ROM, UID;
+   
+   output [4:0] addr_UID_ROM;
+   reg [4:0] addr_UID_ROM;
+
+   parameter INIT = 0, FIRST = 1, SECOND = 2, THIRD = 3, FOURTH = 4, 
+             ROM_FETCHWD = 5, ROM_CYCLE1 = 6, ROM_CYCLE2 = 7, ROM_CATCH = 8,
+             COMPARE = 9, CHECKSTATUS = 10, CHECKGUEST = 11;
+				 
+   reg [3:0] State;
+
+always@(posedge clk) begin
+   if (rst==1'b0)
+      begin
+         matchID <=1'b0;
+         intID <= 2'b00;
+         addr_UID_ROM<=5'b00000;
+         data_UID_ROM<=16'b0000_0000_0000_0000;
+         UID <= 16'b0000_0000_0000_0000;
+         attempt <= 0;         
+         isGuest <= 0;
+      end
+   else
+      begin
+         case (State)
+            INIT: begin
+                matchID<= 1'b0;
+                intID<= 2'b0;
+                addr_UID_ROM<=5'b00000;
+                data_UID_ROM<=16'b0;
+                UID <= 16'b0;
+                attempt<= 0;
+                isGuest <=0;
+	        State <= FIRST;
+            end
+            FIRST: begin
+               if (pwenter==1'b1) begin 
+                  UID[15:12] <= pwdigit;
+                  State<=SECOND;
+               end
+               else State<=FIRST;
+            end
+            SECOND: begin
+               if (pwenter==1'b1) begin 
+                  UID[11:8] <= pwdigit;
+                  State<=THIRD;
+               end
+               else State<=SECOND;
+            end
+            THIRD: begin
+               if (pwenter==1'b1) begin 
+                  UID[7:4] <= pwdigit;
+                  State<=FOURTH;
+               end
+               else State<=THIRD;
+            end
+            FOURTH: begin
+               if (pwenter==1'b1) begin 
+                  UID[3:0] <= pwdigit;
+                  State<=ROM_FETCHWD;
+               end
+               else State<=FOURTH;
+            end
+            ROM_FETCHWD: begin
+               addr_UID_ROM <= {3'b000, intID};
+               State<=ROM_CYCLE1;
+            end
+            ROM_CYCLE1: begin
+               State<=ROM_CYCLE2;
+            end
+            ROM_CYCLE2: begin
+               State<=ROM_CATCH;
+            end
+            ROM_CATCH: begin
+               data_UID_ROM <= q_UID_ROM;
+               State<=COMPARE;
+            end
+            COMPARE: begin
+               if(UID == data_UID_ROM) State <= CHECKGUEST;
+               else State <= CHECKSTATUS;
+            end
+            CHECKSTATUS: begin
+              if (data_UID_ROM == 16'b1111_1111_1111_1111) begin
+                  intID <= 0;
+                  attempt <= attempt + 1'b1;
+                  addr_UID_ROM<={3'b000,2'b00};
+               end
+               else begin
+                   intID <= intID + 1'b1;            
+                   State <= ROM_FETCHWD;
+               end
+            end
+            CHECKGUEST: begin
+               matchID<=1'b1;
+               if (intID==1'b0) isGuest<=1'b1;
+               else isGuest<=0;
+               if (log_out == 1'b1) State <= INIT;
+               else State <= CHECKGUEST;
+            end
+	    default: begin
+               State <= INIT;
+            end
+         endcase
+      end
+   end
+endmodule
