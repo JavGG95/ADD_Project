@@ -5,12 +5,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	TB_Authentication
 
-} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_Checking.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ROM_TB
+-- Compiling module PW_Checking
 
 Top level modules:
-	ROM_TB
+	PW_Checking
 
 } {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/UID_ROM.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/UID_ROM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -18,6 +18,27 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	UID_ROM
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ROM_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ROM_TB
+
+Top level modules:
+	ROM_TB
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ID_Checking.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/ID_Checking.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_Checking
+
+Top level modules:
+	ID_Checking
+
+} {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/Authentication.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/Authentication.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Authentication
+
+Top level modules:
+	Authentication
 
 } {} {}} C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_ROM.v {1 {vlog -work work -stats=none C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/PW_ROM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

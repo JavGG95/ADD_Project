@@ -25,6 +25,7 @@
 // HOW TO UNLOCK
 // The user needs to type in a 4-bit Digit followed by the push-button, 4 times.
 // If correct, will enable the Password module.
+
 module ID_Checking(clk, rst, pwdigit, pwenter, log_out, 
                         matchID, isGuest, intID,
                         q_UID_ROM, addr_UID_ROM);
