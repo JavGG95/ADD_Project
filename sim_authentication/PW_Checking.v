@@ -71,6 +71,7 @@ always@(posedge clk) begin
          log_in_ctrl<=1'b0;
          isGuest_ctrl<=1'b0;
          intID_ctrl<= 2'b00;
+         State <= INIT;
       end
    else
       begin
@@ -132,7 +133,7 @@ always@(posedge clk) begin
                else State<=SIXTH;
             end
             ROM_FETCHWD: begin
-               addr_PW_ROM <= {3'b000, intID};
+               addr_PW_ROM <= {2'b00, intID};
                State<=ROM_CYCLE1;
             end
             ROM_CYCLE1: begin
@@ -168,7 +169,7 @@ always@(posedge clk) begin
              WAIT_LOGOUT: begin
                 if (count == 2'b11) State <= INIT;
                 else begin 
-                    log_out<=0;
+                    log_out<=1;
                     log_in_ctrl<=0;
                     count <= count + 1'b1;
                     State <= WAIT_LOGOUT;           
@@ -181,3 +182,4 @@ always@(posedge clk) begin
       end
    end
 endmodule
+

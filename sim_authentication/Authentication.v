@@ -28,11 +28,12 @@
 // The user needs to type in 4-digit username followed by a 6-digit password to log into the system.
 // a push-button must be pressed after each digit has been configured via toggle switches.
  
-module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl, isGuest_ctrl, intID_ctrl);
+module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl, isGuest_ctrl, intID_ctrl, matchID);
 
    input clk, rst, pwenter, log_out_ctrl;
    input [3:0] pwdigit; 
 
+   output matchID;
    output log_in_ctrl, isGuest_ctrl;
    output [2:0] intID_ctrl;
 

@@ -25,16 +25,15 @@
 // q_UID_ROM/q_PW_ROM: 16-bit/24-bit Integer grabbed from UID/PW ROM.
 //
 // HOW TO UNLOCK
-// The user needs to type in password values to log into the system so they can play the game.
-// After the system has been unlocked, the user will be logged in:
-// the logged_in flag will be on and logged_out flag will be off
-//
+// The user needs to type in 4-digit username followed by a 6-digit password to log into the system.
+// a push-button must be pressed after each digit has been configured via toggle switches.
  
-module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl, isGuest_ctrl, intID_ctrl);
+module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl, isGuest_ctrl, intID_ctrl, );
 
    input clk, rst, pwenter, log_out_ctrl;
    input [3:0] pwdigit; 
 
+   output matchID;
    output log_in_ctrl, isGuest_ctrl;
    output [2:0] intID_ctrl;
 

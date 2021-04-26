@@ -62,6 +62,7 @@ always@(posedge clk) begin
          UID <= 16'b0000_0000_0000_0000;
          attempt <= 2'b00;         
          isGuest <= 1'b0;
+	 State <= INIT;
       end
    else
       begin
@@ -72,8 +73,8 @@ always@(posedge clk) begin
                 addr_UID_ROM<=5'b00000;
                 data_UID_ROM<=16'b0;
                 UID <= 16'b0;
-                attempt<= 0;
-                isGuest <=0;
+                attempt<= 2'b00;
+                isGuest <= 1'b0;
 	        State <= FIRST;
             end
             FIRST: begin
@@ -105,7 +106,7 @@ always@(posedge clk) begin
                else State<=FOURTH;
             end
             ROM_FETCHWD: begin
-               addr_UID_ROM <= {3'b000, intID};
+               addr_UID_ROM <= {2'b00, intID};
                State<=ROM_CYCLE1;
             end
             ROM_CYCLE1: begin
@@ -119,15 +120,16 @@ always@(posedge clk) begin
                State<=COMPARE;
             end
             COMPARE: begin
-               if(UID == data_UID_ROM) State <= CHECKGUEST;
+	       if (data_UID_ROM == 16'b1111_1111_1111_1111) State <= CHECKSTATUS;
+               else if(UID == data_UID_ROM) State <= CHECKGUEST;
                else State <= CHECKSTATUS;
             end
             CHECKSTATUS: begin
-              if (attempt == 2'b10) State <= INIT;
+              if (attempt == 2'b11) State <= INIT;
               else if (data_UID_ROM == 16'b1111_1111_1111_1111) begin
                   intID <= 0;
                   attempt <= attempt + 1'b1;
-                  addr_UID_ROM<={3'b000,2'b00};
+                  addr_UID_ROM<={2'b00,2'b00};
                   State <= FIRST;
                end
                else begin
