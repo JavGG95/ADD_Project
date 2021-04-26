@@ -1,0 +1,11 @@
+# Reading pref.tcl
+# OpenFile C:/Users/avish/Documents/ModelSim/GroupProject/sim_authentication/testbench_authentication.mpf
+# Loading project testbench_authentication
+# Compile of Authentication.v was successful.
+# Compile of ID_Checking.v was successful.
+# Compile of PW_Checking.v was successful.
+# Compile of TB_Authentication.v was successful.
+# Compile of PW_ROM.v was successful.
+# Compile of UID_ROM.v was successful.
+# Compile of ROM_TB.v was successful.
+# 7 compiles, 0 failed with no errors.
