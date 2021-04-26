@@ -1,0 +1,11 @@
+vsim -gui -L altera_mf_ver -L altera_ver work.testbench_GameControl
+# vsim -gui -L altera_mf_ver -L altera_ver work.testbench_GameControl 
+# Start time: 05:31:15 on Apr 09,2021
+# Loading work.testbench_GameControl
+# Loading work.GameControl
+add wave sim:/testbench_GameControl/*
+run
+quit -sim
+# End time: 05:38:53 on Apr 09,2021, Elapsed time: 0:07:38
+# Errors: 0, Warnings: 1
+project open C:/Users/javgg/Documents/FPGA/Demos/Lab4_GARCIA_J/sim_rngLFSR/RNG_4bitLFSR
