@@ -1,0 +1,227 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vCounting_to_10
+Z0 !s110 1619811241
+!i10b 1
+!s100 5bYc_RMQA>^>D=Rh[2jRj3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`_6J8ANdfz94i2I2Y407n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ADD_Demos/LED Timer/sim_led_timer
+w1619811185
+8C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_10.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_10.v
+!i122 160
+L0 1 36
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1619811241.000000
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_10.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_10.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@counting_to_10
+vCounting_to_100
+R0
+!i10b 1
+!s100 ZOS<Y2LUY6@Vo1Ec4>?`^0
+R1
+I6>9R?Wm?HIGke7k[7S_]X0
+R2
+R3
+w1619811165
+8C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_100.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_100.v
+!i122 161
+L0 1 35
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_100.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/Counting_to_100.v|
+!i113 1
+R6
+R7
+n@counting_to_100
+vLED_Timer
+R0
+!i10b 1
+!s100 B_i[5FLXi6[Z=_>N[KSg81
+R1
+IVI8FY_MmH4I`B7n6UiBKg3
+R2
+R3
+w1619763573
+8C:/ADD_Demos/LED Timer/sim_led_timer/LED_Timer.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/LED_Timer.v
+!i122 162
+L0 1 17
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/LED_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/LED_Timer.v|
+!i113 1
+R6
+R7
+n@l@e@d_@timer
+vOne_ms_Timer
+Z8 !s110 1619811242
+!i10b 1
+!s100 j[R;kPTmV`YRO>^TX4X6L3
+R1
+I?MTh:cJ[ea<WGX;M@g7UV2
+R2
+R3
+w1619811234
+8C:/ADD_Demos/LED Timer/sim_led_timer/One_ms_Timer.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/One_ms_Timer.v
+!i122 163
+L0 1 37
+R4
+r1
+!s85 0
+31
+Z9 !s108 1619811242.000000
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/One_ms_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/One_ms_Timer.v|
+!i113 1
+R6
+R7
+n@one_ms_@timer
+vOne_sec_Timer
+R8
+!i10b 1
+!s100 ?Ug8CCA8aS7_;3GcaQj`A1
+R1
+IdGJlnU2L>ZDS1cfh4IKY[2
+R2
+R3
+w1619762971
+8C:/ADD_Demos/LED Timer/sim_led_timer/One_sec_Timer.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/One_sec_Timer.v
+!i122 164
+L0 1 15
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/One_sec_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/One_sec_Timer.v|
+!i113 1
+R6
+R7
+n@one_sec_@timer
+vShift_right
+R8
+!i10b 1
+!s100 zIEO1]FC<=IZSOi9<bi7]2
+R1
+I]iXW0EM0CVNObGeYVFkXP3
+R2
+R3
+w1619810609
+8C:/ADD_Demos/LED Timer/sim_led_timer/Shift_right.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/Shift_right.v
+!i122 165
+L0 1 52
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/Shift_right.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/Shift_right.v|
+!i113 1
+R6
+R7
+n@shift_right
+vtestbench_LED_Timer
+R8
+!i10b 1
+!s100 `azlO:hm3:?aeT@6E0T]@0
+R1
+I^EJAfK`B55P5GLO^EO?:S1
+R2
+R3
+w1619763772
+8C:/ADD_Demos/LED Timer/sim_led_timer/testbench_LED_Timer.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/testbench_LED_Timer.v
+!i122 166
+L0 1 61
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/testbench_LED_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/testbench_LED_Timer.v|
+!i113 1
+R6
+R7
+ntestbench_@l@e@d_@timer
+vtestbench_One_sec_Timer
+R8
+!i10b 1
+!s100 :F9Fm7[e;;6^2UQHhjU7m0
+R1
+IVfdV@PKg3?dk9Vh<I3M221
+R2
+R3
+w1619765372
+8C:/ADD_Demos/LED Timer/sim_led_timer/testbench_One_sec_Timer.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/testbench_One_sec_Timer.v
+!i122 167
+L0 1 64
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/testbench_One_sec_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/testbench_One_sec_Timer.v|
+!i113 1
+R6
+R7
+ntestbench_@one_sec_@timer
+vtestbench_Shift_right
+!s110 1619811243
+!i10b 1
+!s100 EijUo82AUh5Fm1h]?A<H[1
+R1
+IDe>WeNn4cKcf]9[GV@_LR0
+R2
+R3
+w1619765961
+8C:/ADD_Demos/LED Timer/sim_led_timer/testbench_Shift_right.v
+FC:/ADD_Demos/LED Timer/sim_led_timer/testbench_Shift_right.v
+!i122 168
+L0 1 77
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ADD_Demos/LED Timer/sim_led_timer/testbench_Shift_right.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/LED Timer/sim_led_timer/testbench_Shift_right.v|
+!i113 1
+R6
+R7
+ntestbench_@shift_right

@@ -1,0 +1,10 @@
+# Compile of Counting_to_10.v was successful.
+# Compile of Counting_to_100.v was successful.
+# Compile of LED_Timer.v was successful.
+# Compile of One_ms_Timer.v was successful.
+# Compile of One_sec_Timer.v was successful.
+# Compile of Shift_right.v was successful.
+# Compile of testbench_LED_Timer.v was successful.
+# Compile of testbench_One_sec_Timer.v was successful.
+# Compile of testbench_Shift_right.v was successful.
+# 9 compiles, 0 failed with no errors.
