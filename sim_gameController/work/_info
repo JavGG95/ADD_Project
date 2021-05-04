@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vGameController
+!s110 1619424796
+!i10b 1
+!s100 ]lX];HmH;`_J6UId3IV=80
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMW<R2^[PB2@a7i`h:0m3S2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/javgg/Documents/FPGA/sim_gameController
+w1619424720
+8C:/Users/javgg/Documents/FPGA/sim_gameController/GameController.v
+FC:/Users/javgg/Documents/FPGA/sim_gameController/GameController.v
+!i122 0
+L0 1 93
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1619424796.000000
+!s107 C:/Users/javgg/Documents/FPGA/sim_gameController/GameController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/FPGA/sim_gameController/GameController.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@game@controller
+vtestbench_GameControl
+!s110 1619424798
+!i10b 1
+!s100 fjYhGzimTeIbiCO6zm3Nk2
+R0
+I>`ZfSUUiKeThPKO;k23;A3
+R1
+R2
+w1617697785
+8C:\Users\javgg\Documents\FPGA\sim_gameController\testbench_GameController.v
+FC:\Users\javgg\Documents\FPGA\sim_gameController\testbench_GameController.v
+!i122 1
+L0 3 98
+R3
+r1
+!s85 0
+31
+!s108 1619424798.000000
+!s107 C:\Users\javgg\Documents\FPGA\sim_gameController\testbench_GameController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\javgg\Documents\FPGA\sim_gameController\testbench_GameController.v|
+!i113 1
+R4
+R5
+ntestbench_@game@control
