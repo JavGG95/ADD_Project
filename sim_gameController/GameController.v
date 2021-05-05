@@ -3,7 +3,9 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 	input [2:0] pIDin, gIDin, indIn1, indIn2;
 	output logOut, scramPls, flipPls, timerEn, timerReconfig;
 	reg logOut, scramPls, timerEn;
-	output [2:0] pIDout, gIDout, lettNum, indOut1, indOut2;
+	output [1:0] lettNum;
+	reg [1:0] lettNum;
+	output [2:0] pIDout, gIDout, indOut1, indOut2;
 	reg [2:0] pIDout, gIDout, lettNum, indOut1, indOut2, mode;
 	output [6:0] score;
 	reg [6:0] score;
@@ -20,7 +22,7 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 					scramPls <= 1'b0;
 					flipPls <= 1'b0;
 					timerEn <= 1'b0;
-					mode <= 4;
+					mode <= 0;
 					if (logOn == 1'b1) begin
 						timerEn <= 1'b1;
 						State <= SETUP;
@@ -33,8 +35,8 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 						State <= LOGOUT;
 					end
 					else if (loadPls == 1'b1) begin
-						if (mode == 6)
-							mode <= 4;
+						if (mode == 2)
+							mode <= 0;
 						else
 							mode <= mode+1;	
 					end
