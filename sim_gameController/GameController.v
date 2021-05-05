@@ -1,7 +1,7 @@
-module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, indIn2, isCorrect, timeOut, logOut, pIDout, gIDout, score, lettNum, scramPls, indOut1, indOut2, flipPls, timerEn, clk, rst);
+module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, indIn2, isCorrect, timeOut, logOut, pIDout, gIDout, score, lettNum, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	input pwdPls, logOn, startPls, loadPls, isCorrect, timeOut, clk, rst;
 	input [2:0] pIDin, gIDin, indIn1, indIn2;
-	output logOut, scramPls, flipPls, timerEn;
+	output logOut, scramPls, flipPls, timerEn, timerReconfig;
 	reg logOut, scramPls, timerEn;
 	output [2:0] pIDout, gIDout, lettNum, indOut1, indOut2;
 	reg [2:0] pIDout, gIDout, lettNum, indOut1, indOut2, mode;
@@ -22,6 +22,7 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 					timerEn <= 1'b0;
 					mode <= 4;
 					if (logOn == 1'b1) begin
+						timerEn <= 1'b1;
 						State <= SETUP;
 					end
 				end
@@ -39,10 +40,11 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 					end
 					else if (startPls == 1'b1)
 						score <= 0;
-						timerEn <= 1'b1;
+						timerReconfig <= 1'b1;
 						State <= GETWORD;
 				end
 				GETWORD: begin
+					timerReconfig <= 1'b0;
 					if (startPls == 1'b1)
 						State <= SETUP;
 					else if (timeOut == 1'b1)
@@ -79,6 +81,7 @@ module GameController(pwdPls, logOn, pIDin, gIDin, startPls, loadPls, indIn1, in
 					State <= SETUP
 				end
 				LOGOUT: begin
+					timerEn <= 1'b0;
 					logOut <= 1'b0;
 					State <= INIT;
 				end
