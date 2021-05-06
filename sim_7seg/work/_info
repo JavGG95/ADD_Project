@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/javgg/Documents/FPGA/Demos/SmartBed/sim
+vSevenSegDisp_Dec
+Z0 !s110 1614892586
+!i10b 1
+!s100 UmPIQe6BBLanF]nYPzYM^0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IYP47e1Wz2DfjKOcNTlbeI3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg
+w1612197540
+8C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v
+FC:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v
+!i122 12
+L0 1 28
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1614892586.000000
+!s107 C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@seven@seg@disp_@dec
+vtestbench_SevenSegDisp_Dec
+R0
+!i10b 1
+!s100 PU;_jNaeTfzlXee[BDz5A3
+R1
+Ig37z2@D;3<O5e37L;DEkL0
+R2
+R3
+w1612198807
+8C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v
+FC:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v
+!i122 13
+L0 2 27
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v|
+!i113 1
+R6
+R7
+ntestbench_@seven@seg@disp_@dec

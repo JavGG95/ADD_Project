@@ -1,0 +1,15 @@
+C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/testbench_SevenSegDisp_Dec.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench_SevenSegDisp_Dec
+
+Top level modules:
+	testbench_SevenSegDisp_Dec
+
+} {} {}} C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/FPGA/Demos/Lab1_GARCIA_J/sim_7seg/SevenSegDisp_Dec.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SevenSegDisp_Dec
+
+Top level modules:
+	SevenSegDisp_Dec
+
+} {} {}}
