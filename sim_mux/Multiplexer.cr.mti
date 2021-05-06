@@ -1,0 +1,8 @@
+C:/Users/javgg/Documents/GitHub/ADD_Project/sim_mux/Multiplexer.v {1 {vlog -work work -stats=none {C:\Users\javgg\Documents\GitHub\ADD_Project\sim_mux\Multiplexer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Multiplexer
+
+Top level modules:
+	Multiplexer
+
+} {} {}}

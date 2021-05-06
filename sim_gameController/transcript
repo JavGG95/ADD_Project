@@ -1,3 +1,36 @@
+# Compile of GameController.v failed with 7 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 7 errors.
+# Compile of GameController.v failed with 6 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 6 errors.
+# Compile of GameController.v failed with 4 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of GameController.v failed with 3 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of GameController.v failed with 1 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of GameController.v failed with 2 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of GameController.v failed with 1 errors.
+# Compile of testbench_GameController.v was successful.
+# 2 compiles, 1 failed with 1 error.
 # Compile of GameController.v was successful.
 # Compile of testbench_GameController.v was successful.
 # 2 compiles, 0 failed with no errors.
+# Compile of GameController.v was successful.
+# Compile of testbench_GameController.v was successful.
+# Compile of IDROM_Mux.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of GameController.v was successful.
+# Compile of testbench_GameController.v was successful.
+# Compile of IDROM_Mux.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of GameController.v was successful.
+# Compile of testbench_GameController.v was successful.
+# Compile of IDROM_Mux.v was successful.
+# 3 compiles, 0 failed with no errors.

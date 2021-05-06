@@ -1,38 +1,37 @@
-module Scoring(timeOut, scoreReq, isGuest, intIDin, score, playerID, scoreRAM_Dout, intIDout, scoreRAM_RW, scoreRAM_Din, scoreRAM_Addr, topID, topScore, clk, rst);
-	input timeOut, scoreReq, isGuest, clk, rst;
-	input [2:0] intIDin;
+module Scoring(controlSig, isGuest, intIDin, score, playerID, scoreRAM_Dout, intIDout, scoreRAM_RW, scoreRAM_Din, scoreRAM_Addr, 
+		topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
+	input isGuest, clk, rst;
+	input [2:0] controlSig, intIDin;
 	input [7:0] score;
 	input [15:0] playerID, scoreRAM_Dout;
 	output scoreRAM_RW;
 	reg scoreRAM_RW;
+	output [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
+	reg [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
 	output [4:0] intIDout, scoreRAM_Addr;
 	reg [4:0] intIDout, scoreRAM_Addr, Global, Cycle, Count;
-	output [15:0] scoreRAM_Din, topID;
-	reg [15:0] scoreRAM_Din, topID;
-	output [7:0] topScore;
-	reg [7:0] topScore;
+	output [15:0] scoreRAM_Din;
+	reg [15:0] scoreRAM_Din;
 	reg [2:0] State, nextState;
-	parameter INIT = 0, GAMEOVER = 1, FETCH = 2, CHECK = 3, UPDATE = 4, RETRIEVE = 5, SEND = 6, WAIT = 7;
+	parameter INIT = 0, FETCH = 1, CHECK = 2, UPDATE = 3, RETRIEVE = 4, SEND = 5, WAIT = 6;
 
-	always @(posedge clk)
+	always @(posedge clk) begin
 		if (rst==1'b0)
 			State <= INIT; 
 		else begin
 			case (State)
 				INIT: begin
-					if (timeOut==1'b1)
-						State <= GAMEOVER;
-				end
-				GAMEOVER: begin
-					scoreRAM_RW <= 1'b0;
-					if (isGuest==1'b0) begin
-						Global <= 0;
-						State <= FETCH;
+					if (controlSig==3) begin
+						topScoreOnes <= score%10;
+						topScoreTens <= score/10;
+						if (isGuest==1'b0) begin
+							Global <= 0;
+							State <= FETCH;
+						end
 					end
-					else if (scoreReq==1'b1)
+					else if (controlSig==4) begin
 						State <= RETRIEVE;
-					else if (timeOut==1'b0)
-						State <= INIT;					
+					end										
 				end
 				FETCH: begin
 					scoreRAM_RW <= 1'b0;
@@ -47,7 +46,7 @@ module Scoring(timeOut, scoreReq, isGuest, intIDin, score, playerID, scoreRAM_Do
 						scoreRAM_Addr <= 1;
 					end
 					else
-						State <= RETRIEVE;
+						State <= INIT;
 				end
 				CHECK: begin
 					if (scoreRAM_Dout > score)
@@ -77,24 +76,26 @@ module Scoring(timeOut, scoreReq, isGuest, intIDin, score, playerID, scoreRAM_Do
 						Global <= Global+1;
 				end
 				RETRIEVE: begin
+					scoreRAM_RW <= 1'b0;
 					scoreRAM_Addr <= 0;
 					Cycle <= 0;
-					nextState <= SEND;	
-					if (scoreReq==1'b1)
-						State <= WAIT;					
-					else if (timeOut==1'b0)
-						State <= INIT;		
+					State <= WAIT
+					nextState <= SEND;		
 				end
 				SEND: begin
 					if (scoreRAM_Addr==0) begin
-						topID <= scoreRAM_Dout;
+						topIDOne <= scoreRAM_Dout[3:0];
+						topIDTwo <= scoreRAM_Dout[7:4];
+						topIDThree <= scoreRAM_Dout[11:8];
+						topIDFour <= scoreRAM_Dout[15:12];
 						scoreRAM_Addr <= 1;
 						Cycle <= 0;
 						State <= WAIT;	
 					end
 					else begin
-						topScore <= scoreRAM_Dout;
-						State <= RETRIEVE;
+						topScoreOnes <= scoreRAM_Dout%10;
+						topScoreTens <= scoreRAM_Dout/10;
+						State <= INIT;
 					end						
 				end
 				WAIT: begin
