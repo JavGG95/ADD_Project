@@ -14,7 +14,7 @@ module Scoring(timeOut, scoreReq, isGuest, intIDin, score, playerID, scoreRAM_Do
 	reg [2:0] State, nextState;
 	parameter INIT = 0, GAMEOVER = 1, FETCH = 2, CHECK = 3, UPDATE = 4, RETRIEVE = 5, SEND = 6, WAIT = 7;
 
-	always @(posedge clk) begin
+	always @(posedge clk)
 		if (rst==1'b0)
 			State <= INIT; 
 		else begin
