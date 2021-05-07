@@ -1,5 +1,5 @@
 
-State Machine - |top_module|handler_top:comb_3|handler:handler1|state
+State Machine - |top_module|handler_top:handler_top1|handler:handler1|state
 Name state.check state.ChangedDisplay state.ChangeIndice state.WaitForPlayer state.ScrambledDisplay state.Scrambler state.WaitScramble state.WaitForScramble state.Display state.PreDisplay state.ROM_Catch state.Delay_CYC2 state.Delay_CYC1 state.Fetch_ROM state.Init 
 state.Init 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.Fetch_ROM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -17,13 +17,13 @@ state.ChangeIndice 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1
 state.ChangedDisplay 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.check 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |top_module|handler_top:comb_3|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1|state
+State Machine - |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1|state
 Name state.Init state.Done state.scramble 
 state.Init 0 0 0 
 state.scramble 1 0 1 
 state.Done 1 1 0 
 
-State Machine - |top_module|handler_top:comb_3|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1|state
+State Machine - |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1|state
 Name state.wait3 state.wait2 state.wait1 state.Init state.Done 
 state.Init 0 0 0 0 0 
 state.wait1 0 0 1 1 0 

@@ -2,16 +2,16 @@
 start => start.IN1
 change => change.IN1
 password => password.IN1
-LEDs[0] << LED_Timer:LED_Timer1.port2
-LEDs[1] << LED_Timer:LED_Timer1.port2
-LEDs[2] << LED_Timer:LED_Timer1.port2
-LEDs[3] << LED_Timer:LED_Timer1.port2
-LEDs[4] << LED_Timer:LED_Timer1.port2
-LEDs[5] << LED_Timer:LED_Timer1.port2
-LEDs[6] << LED_Timer:LED_Timer1.port2
-LEDs[7] << LED_Timer:LED_Timer1.port2
-LEDs[8] << LED_Timer:LED_Timer1.port2
-LEDs[9] << LED_Timer:LED_Timer1.port2
+LEDs[0] <= LED_Timer:LED_Timer1.port2
+LEDs[1] <= LED_Timer:LED_Timer1.port2
+LEDs[2] <= LED_Timer:LED_Timer1.port2
+LEDs[3] <= LED_Timer:LED_Timer1.port2
+LEDs[4] <= LED_Timer:LED_Timer1.port2
+LEDs[5] <= LED_Timer:LED_Timer1.port2
+LEDs[6] <= LED_Timer:LED_Timer1.port2
+LEDs[7] <= LED_Timer:LED_Timer1.port2
+LEDs[8] <= LED_Timer:LED_Timer1.port2
+LEDs[9] <= LED_Timer:LED_Timer1.port2
 PI1[0] => PI1[0].IN1
 PI1[1] => PI1[1].IN1
 PI1[2] => PI1[2].IN1
@@ -22,48 +22,48 @@ Pass_digit[0] => Pass_digit[0].IN1
 Pass_digit[1] => Pass_digit[1].IN1
 Pass_digit[2] => Pass_digit[2].IN1
 Pass_digit[3] => Pass_digit[3].IN1
-Disp1[0] << Multiplexer:comb_4.port14
-Disp1[1] << Multiplexer:comb_4.port14
-Disp1[2] << Multiplexer:comb_4.port14
-Disp1[3] << Multiplexer:comb_4.port14
-Disp1[4] << Multiplexer:comb_4.port14
-Disp1[5] << Multiplexer:comb_4.port14
-Disp1[6] << Multiplexer:comb_4.port14
-Disp2[0] << Multiplexer:comb_4.port15
-Disp2[1] << Multiplexer:comb_4.port15
-Disp2[2] << Multiplexer:comb_4.port15
-Disp2[3] << Multiplexer:comb_4.port15
-Disp2[4] << Multiplexer:comb_4.port15
-Disp2[5] << Multiplexer:comb_4.port15
-Disp2[6] << Multiplexer:comb_4.port15
-Disp3[0] << Multiplexer:comb_4.port16
-Disp3[1] << Multiplexer:comb_4.port16
-Disp3[2] << Multiplexer:comb_4.port16
-Disp3[3] << Multiplexer:comb_4.port16
-Disp3[4] << Multiplexer:comb_4.port16
-Disp3[5] << Multiplexer:comb_4.port16
-Disp3[6] << Multiplexer:comb_4.port16
-Disp4[0] << Multiplexer:comb_4.port17
-Disp4[1] << Multiplexer:comb_4.port17
-Disp4[2] << Multiplexer:comb_4.port17
-Disp4[3] << Multiplexer:comb_4.port17
-Disp4[4] << Multiplexer:comb_4.port17
-Disp4[5] << Multiplexer:comb_4.port17
-Disp4[6] << Multiplexer:comb_4.port17
-Disp5[0] << Multiplexer:comb_4.port18
-Disp5[1] << Multiplexer:comb_4.port18
-Disp5[2] << Multiplexer:comb_4.port18
-Disp5[3] << Multiplexer:comb_4.port18
-Disp5[4] << Multiplexer:comb_4.port18
-Disp5[5] << Multiplexer:comb_4.port18
-Disp5[6] << Multiplexer:comb_4.port18
-Disp6[0] << Multiplexer:comb_4.port19
-Disp6[1] << Multiplexer:comb_4.port19
-Disp6[2] << Multiplexer:comb_4.port19
-Disp6[3] << Multiplexer:comb_4.port19
-Disp6[4] << Multiplexer:comb_4.port19
-Disp6[5] << Multiplexer:comb_4.port19
-Disp6[6] << Multiplexer:comb_4.port19
+Disp1[0] <= Multiplexer:Multiplexer1.port14
+Disp1[1] <= Multiplexer:Multiplexer1.port14
+Disp1[2] <= Multiplexer:Multiplexer1.port14
+Disp1[3] <= Multiplexer:Multiplexer1.port14
+Disp1[4] <= Multiplexer:Multiplexer1.port14
+Disp1[5] <= Multiplexer:Multiplexer1.port14
+Disp1[6] <= Multiplexer:Multiplexer1.port14
+Disp2[0] <= Multiplexer:Multiplexer1.port15
+Disp2[1] <= Multiplexer:Multiplexer1.port15
+Disp2[2] <= Multiplexer:Multiplexer1.port15
+Disp2[3] <= Multiplexer:Multiplexer1.port15
+Disp2[4] <= Multiplexer:Multiplexer1.port15
+Disp2[5] <= Multiplexer:Multiplexer1.port15
+Disp2[6] <= Multiplexer:Multiplexer1.port15
+Disp3[0] <= Multiplexer:Multiplexer1.port16
+Disp3[1] <= Multiplexer:Multiplexer1.port16
+Disp3[2] <= Multiplexer:Multiplexer1.port16
+Disp3[3] <= Multiplexer:Multiplexer1.port16
+Disp3[4] <= Multiplexer:Multiplexer1.port16
+Disp3[5] <= Multiplexer:Multiplexer1.port16
+Disp3[6] <= Multiplexer:Multiplexer1.port16
+Disp4[0] <= Multiplexer:Multiplexer1.port17
+Disp4[1] <= Multiplexer:Multiplexer1.port17
+Disp4[2] <= Multiplexer:Multiplexer1.port17
+Disp4[3] <= Multiplexer:Multiplexer1.port17
+Disp4[4] <= Multiplexer:Multiplexer1.port17
+Disp4[5] <= Multiplexer:Multiplexer1.port17
+Disp4[6] <= Multiplexer:Multiplexer1.port17
+Disp5[0] <= Multiplexer:Multiplexer1.port18
+Disp5[1] <= Multiplexer:Multiplexer1.port18
+Disp5[2] <= Multiplexer:Multiplexer1.port18
+Disp5[3] <= Multiplexer:Multiplexer1.port18
+Disp5[4] <= Multiplexer:Multiplexer1.port18
+Disp5[5] <= Multiplexer:Multiplexer1.port18
+Disp5[6] <= Multiplexer:Multiplexer1.port18
+Disp6[0] <= Multiplexer:Multiplexer1.port19
+Disp6[1] <= Multiplexer:Multiplexer1.port19
+Disp6[2] <= Multiplexer:Multiplexer1.port19
+Disp6[3] <= Multiplexer:Multiplexer1.port19
+Disp6[4] <= Multiplexer:Multiplexer1.port19
+Disp6[5] <= Multiplexer:Multiplexer1.port19
+Disp6[6] <= Multiplexer:Multiplexer1.port19
 rst => rst.IN9
 clk => clk.IN9
 
@@ -1141,7 +1141,7 @@ logOn => State.OUTPUTSELECT
 logOn => State.OUTPUTSELECT
 logOn => State.OUTPUTSELECT
 logOn => State.OUTPUTSELECT
-logOn => Mux_Ctrl.DATAB
+logOn => Selector7.IN0
 pIDin[0] => pIDout.DATAB
 pIDin[1] => pIDout.DATAB
 pIDin[2] => pIDout.DATAB
@@ -1224,9 +1224,9 @@ loadPls => flipPls.DATAA
 indIn1[0] => indOut1.DATAB
 indIn1[1] => indOut1.DATAB
 indIn1[2] => indOut1.DATAB
-indIn2[0] => ~NO_FANOUT~
-indIn2[1] => ~NO_FANOUT~
-indIn2[2] => ~NO_FANOUT~
+indIn2[0] => indOut2.DATAB
+indIn2[1] => indOut2.DATAB
+indIn2[2] => indOut2.DATAB
 isCorrect => State.OUTPUTSELECT
 isCorrect => State.OUTPUTSELECT
 isCorrect => State.OUTPUTSELECT
@@ -1257,7 +1257,6 @@ timeOut => flipPls.OUTPUTSELECT
 controlSig[0] <= controlSig[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 controlSig[1] <= controlSig[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 controlSig[2] <= controlSig[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Mux_Ctrl <= Mux_Ctrl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 logOut <= logOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pIDout[0] <= pIDout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pIDout[1] <= pIDout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1280,9 +1279,9 @@ scramPls <= scramPls~reg0.DB_MAX_OUTPUT_PORT_TYPE
 indOut1[0] <= indOut1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 indOut1[1] <= indOut1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 indOut1[2] <= indOut1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-indOut2[0] <= <GND>
-indOut2[1] <= <GND>
-indOut2[2] <= <GND>
+indOut2[0] <= indOut2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+indOut2[1] <= indOut2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+indOut2[2] <= indOut2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 flipPls <= flipPls~reg0.DB_MAX_OUTPUT_PORT_TYPE
 timerEn <= timerEn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 timerReconfig <= timerReconfig~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1290,6 +1289,9 @@ clk => isGuestOut~reg0.CLK
 clk => pIDout[0]~reg0.CLK
 clk => pIDout[1]~reg0.CLK
 clk => pIDout[2]~reg0.CLK
+clk => indOut2[0]~reg0.CLK
+clk => indOut2[1]~reg0.CLK
+clk => indOut2[2]~reg0.CLK
 clk => indOut1[0]~reg0.CLK
 clk => indOut1[1]~reg0.CLK
 clk => indOut1[2]~reg0.CLK
@@ -1317,7 +1319,6 @@ clk => logOut~reg0.CLK
 clk => controlSig[0]~reg0.CLK
 clk => controlSig[1]~reg0.CLK
 clk => controlSig[2]~reg0.CLK
-clk => Mux_Ctrl~reg0.CLK
 clk => State~9.DATAIN
 rst => State.OUTPUTSELECT
 rst => State.OUTPUTSELECT
@@ -1327,11 +1328,14 @@ rst => State.OUTPUTSELECT
 rst => State.OUTPUTSELECT
 rst => State.OUTPUTSELECT
 rst => State.OUTPUTSELECT
-rst => indOut1[0]~reg0.ENA
+rst => indOut2[1]~reg0.ENA
+rst => indOut2[0]~reg0.ENA
 rst => pIDout[2]~reg0.ENA
 rst => pIDout[1]~reg0.ENA
 rst => pIDout[0]~reg0.ENA
 rst => isGuestOut~reg0.ENA
+rst => indOut2[2]~reg0.ENA
+rst => indOut1[0]~reg0.ENA
 rst => indOut1[1]~reg0.ENA
 rst => indOut1[2]~reg0.ENA
 rst => lettNum[0]~reg0.ENA
@@ -1358,7 +1362,6 @@ rst => logOut~reg0.ENA
 rst => controlSig[0]~reg0.ENA
 rst => controlSig[1]~reg0.ENA
 rst => controlSig[2]~reg0.ENA
-rst => Mux_Ctrl~reg0.ENA
 
 
 |top_module|score_top:score_top1
@@ -2314,7 +2317,7 @@ rst => Register.OUTPUTSELECT
 rst => LED_timeout.OUTPUTSELECT
 
 
-|top_module|handler_top:comb_3
+|top_module|handler_top:handler_top1
 start => start.IN3
 change => change.IN1
 PI1[0] => PI1[0].IN1
@@ -2373,7 +2376,7 @@ clk => clk.IN4
 rst => rst.IN3
 
 
-|top_module|handler_top:comb_3|RNG:RNG1
+|top_module|handler_top:handler_top1|RNG:RNG1
 RNG_gen => en.OUTPUTSELECT
 RNG_gen => count_out[0]~reg0.ENA
 RNG_gen => count_out[1]~reg0.ENA
@@ -2400,7 +2403,7 @@ rst => LFSR.OUTPUTSELECT
 rst => en.OUTPUTSELECT
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1
 RNG_gen => RNG_gen.IN1
 mode[0] => mode[0].IN2
 mode[1] => mode[1].IN2
@@ -2427,7 +2430,7 @@ rst => rst.IN3
 clk => clk.IN3
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|RNG:RNG
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG
 RNG_gen => en.OUTPUTSELECT
 RNG_gen => count_out[0]~reg0.ENA
 RNG_gen => count_out[1]~reg0.ENA
@@ -2454,7 +2457,7 @@ rst => LFSR.OUTPUTSELECT
 rst => en.OUTPUTSELECT
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|mod_top:mod_top1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1
 en => en.IN2
 random[0] => random[0].IN1
 random[1] => random[1].IN1
@@ -2470,7 +2473,7 @@ rst => rst.IN2
 clk => clk.IN2
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|mod_top:mod_top1|mod:mod1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod:mod1
 en => random_number.OUTPUTSELECT
 en => random_number.OUTPUTSELECT
 en => random_number.OUTPUTSELECT
@@ -2501,7 +2504,7 @@ clk => index[1]~reg0.CLK
 clk => index[2]~reg0.CLK
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1
 en => state.OUTPUTSELECT
 en => state.OUTPUTSELECT
 en => state.OUTPUTSELECT
@@ -2530,7 +2533,7 @@ clk => done~reg0.CLK
 clk => state~6.DATAIN
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1
 ready => ready.IN1
 index[0] => index[0].IN1
 index[1] => index[1].IN1
@@ -2560,7 +2563,7 @@ rst => rst.IN2
 clk => clk.IN2
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1
 index[0] => Decoder0.IN2
 index[0] => Decoder1.IN1
 index[0] => Decoder3.IN1
@@ -2635,7 +2638,7 @@ clk => index1[1]~reg0.CLK
 clk => index1[2]~reg0.CLK
 
 
-|top_module|handler_top:comb_3|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1
+|top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1
 ready => state.OUTPUTSELECT
 ready => state.OUTPUTSELECT
 ready => state.OUTPUTSELECT
@@ -2720,7 +2723,7 @@ rst => o1[1]~reg0.ENA
 rst => o1[2]~reg0.ENA
 
 
-|top_module|handler_top:comb_3|handler:handler1
+|top_module|handler_top:handler_top1|handler:handler1
 start => state.OUTPUTSELECT
 start => state.OUTPUTSELECT
 start => state.OUTPUTSELECT
@@ -3198,7 +3201,7 @@ rst => ROM_addr[4]~reg0.ENA
 rst => ROM_addr[5]~reg0.ENA
 
 
-|top_module|handler_top:comb_3|WORDROM:WORDROM1
+|top_module|handler_top:handler_top1|WORDROM:WORDROM1
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -3256,7 +3259,7 @@ q[46] <= altsyncram:altsyncram_component.q_a
 q[47] <= altsyncram:altsyncram_component.q_a
 
 
-|top_module|handler_top:comb_3|WORDROM:WORDROM1|altsyncram:altsyncram_component
+|top_module|handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -3383,7 +3386,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|top_module|handler_top:comb_3|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated
+|top_module|handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3784,7 +3787,7 @@ decoder_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 decoder_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_module|Multiplexer:comb_4
+|top_module|Multiplexer:Multiplexer1
 controlSig[0] => Mux0.IN8
 controlSig[0] => Mux1.IN8
 controlSig[0] => Mux2.IN8
