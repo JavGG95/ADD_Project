@@ -26,13 +26,12 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	ButtonShaper PassShaper(password, pass_Out, clk, rst);
 	ButtonShaper StartShaper(start, start_Out, clk, rst);
 	ButtonShaper ChangeShaper(change, change_Out, clk, rst);
-	GameController GameController1(pass_Out, log_in_ctrl, intID_ctrl, isGuest_ctrl,
+	GameController GameController1(pass_Out, 1'b1, 1'b1, 1'b0,
 	start_Out, change_Out, PI1, PI2, isCorrect, timeOut, controlSig, Mux_Ctrl, logOut,
 	pIDout, isGuestOut, score, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, 
 	timerEn, timerReconfig, clk, rst);
-	score_top score_top1(controlSig, isGuestOut, pIDout, score, playerID, 
-	intIDout, topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, 
-	clk, rst);
+	score_top score_top1(controlSig, isGuestOut, pIDout, score, topIDOne, topIDTwo, 
+	topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
 	LED_Timer LED_Timer1(timerReconfig, timerEn, LEDs, timeOut, clk, rst);
 	handler_top(start_Out, change_Out, indOut1, indOut2, lettNum, Display1, 
 	Display2, Display3, Display4, Display5, Display6, en, isCorrect, clk, rst);

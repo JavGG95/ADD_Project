@@ -1,0 +1,110 @@
+
+State Machine - |top_module|handler_top:comb_3|handler:handler1|state
+Name state.check state.ChangedDisplay state.ChangeIndice state.WaitForPlayer state.ScrambledDisplay state.Scrambler state.WaitScramble state.WaitForScramble state.Display state.PreDisplay state.ROM_Catch state.Delay_CYC2 state.Delay_CYC1 state.Fetch_ROM state.Init 
+state.Init 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.Fetch_ROM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.Delay_CYC1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.Delay_CYC2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ROM_Catch 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.PreDisplay 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.Display 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.WaitForScramble 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WaitScramble 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.Scrambler 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ScrambledDisplay 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.WaitForPlayer 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ChangeIndice 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ChangedDisplay 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.check 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_module|handler_top:comb_3|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1|state
+Name state.Init state.Done state.scramble 
+state.Init 0 0 0 
+state.scramble 1 0 1 
+state.Done 1 1 0 
+
+State Machine - |top_module|handler_top:comb_3|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1|state
+Name state.wait3 state.wait2 state.wait1 state.Init state.Done 
+state.Init 0 0 0 0 0 
+state.wait1 0 0 1 1 0 
+state.wait2 0 1 0 1 0 
+state.wait3 1 0 0 1 0 
+state.Done 0 0 0 1 1 
+
+State Machine - |top_module|score_top:score_top1|Scoring:Scoring1|nextState
+Name nextState.UPDATE nextState.FETCH nextState.SEND nextState.CHECK 
+nextState.FETCH 0 0 0 0 
+nextState.CHECK 0 1 0 1 
+nextState.UPDATE 1 1 0 0 
+nextState.SEND 0 1 1 0 
+
+State Machine - |top_module|score_top:score_top1|Scoring:Scoring1|State
+Name State.WAIT State.SEND State.RETRIEVE State.UPDATE State.CHECK State.FETCH State.INIT 
+State.INIT 0 0 0 0 0 0 0 
+State.FETCH 0 0 0 0 0 1 1 
+State.CHECK 0 0 0 0 1 0 1 
+State.UPDATE 0 0 0 1 0 0 1 
+State.RETRIEVE 0 0 1 0 0 0 1 
+State.SEND 0 1 0 0 0 0 1 
+State.WAIT 1 0 0 0 0 0 1 
+
+State Machine - |top_module|GameController:GameController1|State
+Name State.TOPSCORE State.LOGOUT State.GAMEOVER State.CORRECT State.SWAP State.GETWORD State.SETUP State.INIT 
+State.INIT 0 0 0 0 0 0 0 0 
+State.SETUP 0 0 0 0 0 0 1 1 
+State.GETWORD 0 0 0 0 0 1 0 1 
+State.SWAP 0 0 0 0 1 0 0 1 
+State.CORRECT 0 0 0 1 0 0 0 1 
+State.GAMEOVER 0 0 1 0 0 0 0 1 
+State.LOGOUT 0 1 0 0 0 0 0 1 
+State.TOPSCORE 1 0 0 0 0 0 0 1 
+
+State Machine - |top_module|ButtonShaper:ChangeShaper|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |top_module|ButtonShaper:StartShaper|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |top_module|ButtonShaper:PassShaper|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|State
+Name State.WAIT_LOGOUT State.PASSED State.COMPARE State.ROM_CATCH State.ROM_CYCLE2 State.ROM_CYCLE1 State.ROM_FETCHWD State.SIXTH State.FIFTH State.FOURTH State.THIRD State.SECOND State.FIRST State.INIT 
+State.INIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.FIRST 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.SECOND 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.THIRD 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.FOURTH 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.FIFTH 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.SIXTH 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.ROM_FETCHWD 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.ROM_CYCLE1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.ROM_CYCLE2 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.ROM_CATCH 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.COMPARE 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.PASSED 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.WAIT_LOGOUT 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_module|Authentication:Authentication1|ID_Checking:UserEnter|State
+Name State.CHECKGUEST State.CHECKSTATUS State.COMPARE State.ROM_CATCH State.ROM_CYCLE2 State.ROM_CYCLE1 State.ROM_FETCHWD State.FOURTH State.THIRD State.SECOND State.FIRST State.INIT 
+State.INIT 0 0 0 0 0 0 0 0 0 0 0 0 
+State.FIRST 0 0 0 0 0 0 0 0 0 0 1 1 
+State.SECOND 0 0 0 0 0 0 0 0 0 1 0 1 
+State.THIRD 0 0 0 0 0 0 0 0 1 0 0 1 
+State.FOURTH 0 0 0 0 0 0 0 1 0 0 0 1 
+State.ROM_FETCHWD 0 0 0 0 0 0 1 0 0 0 0 1 
+State.ROM_CYCLE1 0 0 0 0 0 1 0 0 0 0 0 1 
+State.ROM_CYCLE2 0 0 0 0 1 0 0 0 0 0 0 1 
+State.ROM_CATCH 0 0 0 1 0 0 0 0 0 0 0 1 
+State.COMPARE 0 0 1 0 0 0 0 0 0 0 0 1 
+State.CHECKSTATUS 0 1 0 0 0 0 0 0 0 0 0 1 
+State.CHECKGUEST 1 0 0 0 0 0 0 0 0 0 0 1 

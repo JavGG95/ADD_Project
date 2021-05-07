@@ -33,13 +33,11 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					mode <= 0;
 					if (logOn == 1'b1) begin
 						Mux_Ctrl <= 1'b1;
-						timerEn <= 1'b1;
 						State <= SETUP;
 					end
 				end
 				SETUP: begin
 					score <= 0;
-					lettNum <= mode;
 					modeDisp <= mode+4;
 					controlSig <= 1;
 					if (pwdPls == 1'b1) begin
@@ -54,7 +52,9 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 						mode <= mode+1;	
 					end
 					else if (startPls == 1'b1) begin
+						lettNum <= mode;
 						controlSig <= 2;
+						timerEn <= 1'b1;
 						timerReconfig <= 1'b1;
 						State <= GETWORD;
 					end
@@ -62,7 +62,7 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 				GETWORD: begin
 					timerReconfig <= 1'b0;
 					if (startPls == 1'b1)
-						State <= SETUP;
+						State <= INIT;
 					else if (timeOut == 1'b1)
 						State <= GAMEOVER;
 					else if (pwdPls == 1'b1) begin
@@ -76,14 +76,13 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					indOut1 <= indIn1;
 					indOut2 <= indOut2;
 					if (startPls == 1'b1)
-						State <= SETUP;
+						State <= INIT;
 					else if (timeOut == 1'b1)
 						State <= GAMEOVER;
 					else if (isCorrect == 1'b1)
 						State <= CORRECT;
-					else if (loadPls == 1'b1) begin
-						flipPls <= 1'b1;
-					end			
+					else if (loadPls == 1'b1)
+						flipPls <= 1'b1;			
 				end
 				CORRECT: begin
 					score <= score+1;
@@ -93,10 +92,8 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					controlSig <= 3;
 					pIDout <= pIDin;
 					isGuestOut <= isGuestIn;
-					if (startPls == 1'b1) begin
-						mode <= 0;
-						State <= SETUP;
-					end
+					if (startPls == 1'b1)
+						State <= INIT;
 				end
 				LOGOUT: begin
 					timerEn <= 1'b0;
@@ -106,10 +103,8 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 				TOPSCORE: begin
 					if (startPls == 1'b1)
 						flag <= flag+1;
-					else if (loadPls == 1'b1) begin
-						mode <= 0;
-						State <= SETUP;
-					end
+					else if (loadPls == 1'b1)
+						State <= INIT;
 					else begin
 						if (flag==1'b0)
 							controlSig <= 4;					
@@ -117,8 +112,9 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 							controlSig <= 5;
 					end
 				end
-				default: 
+				default: begin
 					State <= INIT;
+				end
 			endcase
 		end
 	end

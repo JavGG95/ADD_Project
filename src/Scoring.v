@@ -39,11 +39,10 @@ module Scoring(controlSig, isGuest, intIDin, score, playerID, scoreRAM_Dout, int
 					State <= WAIT;
 					nextState <= CHECK;
 					if (Global==1'b0)
-						scoreRAM_Addr <= intIDin+1;
+						scoreRAM_Addr <= 1;
 					else if (Global==1'b1) begin
 						Count <= 0;
-						intIDout <= intIDin;
-						scoreRAM_Addr <= 1;
+						scoreRAM_Addr <= 2*intIDin+1;
 					end
 					else
 						State <= INIT;
@@ -63,9 +62,16 @@ module Scoring(controlSig, isGuest, intIDin, score, playerID, scoreRAM_Dout, int
 					State <= WAIT;
 					nextState <= FETCH;
 					if (Global==1'b1) begin
-						if (Count==1'b1) begin
+						if (Count==2) begin
 							scoreRAM_Addr <= 0;
-							scoreRAM_Din <= playerID;
+							scoreRAM_Din <= scoreRAM_Dout;
+						end
+						else if (Count==1) begin
+							scoreRAM_RW <= 1'b0;
+							scoreRAM_Addr <= 2*intIDin;
+							Cycle <= 0;
+							Count <= Count+1;
+							nextState <= UPDATE;	
 						end
 						else begin
 							Count <= Count+1;
@@ -93,9 +99,12 @@ module Scoring(controlSig, isGuest, intIDin, score, playerID, scoreRAM_Dout, int
 						State <= WAIT;	
 					end
 					else begin
-						topScoreOnes <= scoreRAM_Dout%10;
-						topScoreTens <= scoreRAM_Dout/10;
-						State <= INIT;
+						if (controlSig==1)
+							State <= INIT;
+						else begin
+							topScoreOnes <= scoreRAM_Dout%10;
+							topScoreTens <= scoreRAM_Dout/10;
+						end
 					end						
 				end
 				WAIT: begin

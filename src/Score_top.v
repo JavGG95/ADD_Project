@@ -1,14 +1,11 @@
-module score_top (controlSig, isGuest, intIDin, score, playerID,  
-	intIDout, topIDOne_out, topIDTwo_out, topIDThree_out, topIDFour_out, 
-	topScoreOnes_out, topScoreTens_out, clk, rst);
+module score_top (controlSig, isGuest, intIDin, score, topIDOne_out, topIDTwo_out, 
+	topIDThree_out, topIDFour_out, topScoreOnes_out, topScoreTens_out, clk, rst);
 
 	input isGuest, clk, rst;
 	input [2:0] controlSig, intIDin;
 	input [7:0] score;
-	input [15:0] playerID;
 	output [6:0] topIDOne_out, topIDTwo_out, topIDThree_out, topIDFour_out, 
 	topScoreOnes_out, topScoreTens_out;
-	output [4:0] intIDout;
 	wire scoreRAM_RW;
 	wire [4:0] scoreRAM_Addr;
 	wire [15:0] scoreRAM_Dout, scoreRAM_Din;
