@@ -15,7 +15,7 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 	output [6:0] score;
 	reg [6:0] score;
 	reg [3:0] State;
-	parameter INIT = 0, SETUP = 1, GETWORD = 2, SWAP = 3, CORRECT = 4, GAMEOVER = 5, LOGOUT = 6, TOPSCORE = 7;
+	parameter INIT = 0, SETUP = 1, GAME = 2, GAMEOVER = 3, LOGOUT = 4, TOPSCORE = 5;
 
 	always @(posedge clk) begin
 		if (rst == 1'b0)
@@ -31,11 +31,11 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					timerReconfig <= 1'b1;
 					mode <= 0;
 					if (logOn == 1'b1) begin
-						timerReconfig <= 1'b0;
 						State <= SETUP;
 					end
 				end
 				SETUP: begin
+					timerReconfig <= 1'b0;
 					score <= 0;
 					modeDisp <= mode+4;
 					controlSig <= 1;
@@ -52,12 +52,12 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					end
 					else if (startPls == 1'b1) begin
 						lettNum <= mode;
-						controlSig <= 2;
 						timerEn <= 1'b1;
-						State <= GETWORD;
+						State <= GAME;
 					end
 				end
-				GETWORD: begin
+				GAME: begin
+					controlSig <= 2;
 					scramPls <= startPls;
 					flipPls <= loadPls;
 					indOut1 <= indIn1;
@@ -73,11 +73,10 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					pIDout <= pIDin;
 					isGuestOut <= isGuestIn;
 					if (startPls == 1'b1)
-						State <= SETUP;
+						State <= INIT;
 				end
 				LOGOUT: begin
-					timerEn <= 1'b0;
-					logOut <= 1'b0;
+					logOut <= 1'b1;
 					State <= INIT;
 				end
 				TOPSCORE: begin

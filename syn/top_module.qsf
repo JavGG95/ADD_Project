@@ -43,39 +43,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY top_module
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "04:30:40  MAY 06, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
-set_global_assignment -name VERILOG_FILE ../src/WORDROM.v
-set_global_assignment -name VERILOG_FILE ../src/UID_ROM.v
-set_global_assignment -name VERILOG_FILE ../src/top_module.v
-set_global_assignment -name VERILOG_FILE ../src/Shift_right.v
-set_global_assignment -name VERILOG_FILE ../src/Scrambler_top.v
-set_global_assignment -name VERILOG_FILE ../src/scrambler_done.v
-set_global_assignment -name VERILOG_FILE ../src/scrambler_checker.v
-set_global_assignment -name VERILOG_FILE ../src/scrambler.v
-set_global_assignment -name VERILOG_FILE ../src/Scoring.v
-set_global_assignment -name VERILOG_FILE ../src/Score_top.v
-set_global_assignment -name VERILOG_FILE ../src/Score_RAM.v
-set_global_assignment -name VERILOG_FILE ../src/ROM_TB.v
-set_global_assignment -name VERILOG_FILE ../src/RNG.v
-set_global_assignment -name VERILOG_FILE ../src/PW_ROM.v
-set_global_assignment -name VERILOG_FILE ../src/PW_Checking.v
-set_global_assignment -name VERILOG_FILE ../src/One_sec_Timer.v
-set_global_assignment -name VERILOG_FILE ../src/One_ms_Timer.v
-set_global_assignment -name VERILOG_FILE ../src/Multiplexer.v
-set_global_assignment -name VERILOG_FILE ../src/Mod_top.v
-set_global_assignment -name VERILOG_FILE ../src/Mod_checker.v
-set_global_assignment -name VERILOG_FILE ../src/Mod.v
-set_global_assignment -name VERILOG_FILE ../src/LoadRegister.v
-set_global_assignment -name VERILOG_FILE ../src/LED_Timer.v
-set_global_assignment -name VERILOG_FILE ../src/IDROM_Mux.v
-set_global_assignment -name VERILOG_FILE ../src/ID_Checking.v
-set_global_assignment -name VERILOG_FILE ../src/handler_top.v
-set_global_assignment -name VERILOG_FILE ../src/handler.v
-set_global_assignment -name VERILOG_FILE ../src/GameController.v
-set_global_assignment -name VERILOG_FILE ../src/dec_7seg.v
-set_global_assignment -name VERILOG_FILE ../src/Counting_to_100.v
-set_global_assignment -name VERILOG_FILE ../src/Counting_to_10.v
-set_global_assignment -name VERILOG_FILE ../src/bs.v
-set_global_assignment -name VERILOG_FILE ../src/Authentication.v
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -162,4 +129,40 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE ../src/LED_Mux.v
+set_global_assignment -name VERILOG_FILE ../src/Disp_Mux.v
+set_global_assignment -name VERILOG_FILE ../src/WORDROM.v
+set_global_assignment -name VERILOG_FILE ../src/UID_ROM.v
+set_global_assignment -name VERILOG_FILE ../src/top_module.v
+set_global_assignment -name VERILOG_FILE ../src/Shift_right.v
+set_global_assignment -name VERILOG_FILE ../src/Scrambler_top.v
+set_global_assignment -name VERILOG_FILE ../src/scrambler_done.v
+set_global_assignment -name VERILOG_FILE ../src/scrambler_checker.v
+set_global_assignment -name VERILOG_FILE ../src/scrambler.v
+set_global_assignment -name VERILOG_FILE ../src/Scoring.v
+set_global_assignment -name VERILOG_FILE ../src/Score_top.v
+set_global_assignment -name VERILOG_FILE ../src/Score_RAM.v
+set_global_assignment -name VERILOG_FILE ../src/ROM_TB.v
+set_global_assignment -name VERILOG_FILE ../src/RNG.v
+set_global_assignment -name VERILOG_FILE ../src/PW_ROM.v
+set_global_assignment -name VERILOG_FILE ../src/PW_Checking.v
+set_global_assignment -name VERILOG_FILE ../src/One_sec_Timer.v
+set_global_assignment -name VERILOG_FILE ../src/One_ms_Timer.v
+set_global_assignment -name VERILOG_FILE ../src/Mod_top.v
+set_global_assignment -name VERILOG_FILE ../src/Mod_checker.v
+set_global_assignment -name VERILOG_FILE ../src/Mod.v
+set_global_assignment -name VERILOG_FILE ../src/LoadRegister.v
+set_global_assignment -name VERILOG_FILE ../src/LED_Timer.v
+set_global_assignment -name VERILOG_FILE ../src/IDROM_Mux.v
+set_global_assignment -name VERILOG_FILE ../src/ID_Checking.v
+set_global_assignment -name VERILOG_FILE ../src/handler_top.v
+set_global_assignment -name VERILOG_FILE ../src/handler.v
+set_global_assignment -name VERILOG_FILE ../src/GameController.v
+set_global_assignment -name VERILOG_FILE ../src/dec_7seg.v
+set_global_assignment -name VERILOG_FILE ../src/Counting_to_100.v
+set_global_assignment -name VERILOG_FILE ../src/Counting_to_10.v
+set_global_assignment -name VERILOG_FILE ../src/bs.v
+set_global_assignment -name VERILOG_FILE ../src/Authentication.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

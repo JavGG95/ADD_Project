@@ -34,7 +34,7 @@
 
 module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_ctrl,
                    log_out, isGuest_ctrl, intID_ctrl, log_in_ctrl, 
-                   q_PW_ROM, addr_PW_ROM);
+                   q_PW_ROM, addr_PW_ROM, status);
    
    input  clk, rst, pwenter, matchID, isGuest, log_out_ctrl;
    input [2:0] intID;
@@ -51,6 +51,9 @@ module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_
 
    output [4:0] addr_PW_ROM;
    reg [4:0] addr_PW_ROM;
+	
+	output [9:0] status;
+	reg [9:0] status;
 
    parameter INIT = 0, FIRST = 1, SECOND = 2, THIRD = 3, FOURTH = 4, FIFTH = 5, SIXTH = 6,
              ROM_FETCHWD = 7, ROM_CYCLE1 = 8, ROM_CYCLE2 = 9, ROM_CATCH = 10,
@@ -60,24 +63,17 @@ module PW_Checking(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_
    reg [1:0] attempt, count;
 
 always@(posedge clk) begin
-   if (rst==1'b0)
-      begin
-         addr_PW_ROM<=5'b00000;
-         data_PW_ROM<=24'b0000_0000_0000_0000_0000_0000;
-         PW<= 24'b0000_0000_0000_0000_0000_0000;
-         attempt<= 1'b0;
-         count<=2'b00;
-         log_out<=1'b0;
-         log_in_ctrl<=1'b0;
-         isGuest_ctrl<=1'b0;
-         intID_ctrl<= 2'b00;
+   if (rst==1'b0) begin
          State <= INIT;
-      end
+   end
    else
       begin
          case (State)
             INIT: begin
-               if(matchID == 1'b1) State <= FIRST;
+               if(matchID == 1'b1) begin
+						State <= FIRST;
+						status <= 10'b1000000000;
+					end
                else begin
                   addr_PW_ROM<=5'b00000;
                   data_PW_ROM<=24'b0000_0000_0000_0000_0000_0000;
@@ -88,6 +84,7 @@ always@(posedge clk) begin
                   log_in_ctrl<=1'b0;
                   isGuest_ctrl<=1'b0;
                   intID_ctrl<= 2'b00;
+						status <= 10'b0000000000;
                end
             end
             FIRST: begin
@@ -163,6 +160,7 @@ always@(posedge clk) begin
                  log_in_ctrl<=1;
                  intID_ctrl<=intID;
                  isGuest_ctrl<=isGuest;
+					  status <= 10'b1100000000;
                  State <= PASSED;
               end
              end

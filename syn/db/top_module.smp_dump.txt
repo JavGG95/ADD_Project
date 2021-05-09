@@ -49,15 +49,13 @@ State.SEND 0 1 0 0 0 0 1
 State.WAIT 1 0 0 0 0 0 1 
 
 State Machine - |top_module|GameController:GameController1|State
-Name State.TOPSCORE State.LOGOUT State.GAMEOVER State.CORRECT State.SWAP State.GETWORD State.SETUP State.INIT 
-State.INIT 0 0 0 0 0 0 0 0 
-State.SETUP 0 0 0 0 0 0 1 1 
-State.GETWORD 0 0 0 0 0 1 0 1 
-State.SWAP 0 0 0 0 1 0 0 1 
-State.CORRECT 0 0 0 1 0 0 0 1 
-State.GAMEOVER 0 0 1 0 0 0 0 1 
-State.LOGOUT 0 1 0 0 0 0 0 1 
-State.TOPSCORE 1 0 0 0 0 0 0 1 
+Name State.TOPSCORE State.LOGOUT State.GAMEOVER State.GAME State.SETUP State.INIT 
+State.INIT 0 0 0 0 0 0 
+State.SETUP 0 0 0 0 1 1 
+State.GAME 0 0 0 1 0 1 
+State.GAMEOVER 0 0 1 0 0 1 
+State.LOGOUT 0 1 0 0 0 1 
+State.TOPSCORE 1 0 0 0 0 1 
 
 State Machine - |top_module|ButtonShaper:ChangeShaper|State
 Name State.INIT State.WAIT State.PULSE 

@@ -29,14 +29,14 @@
 // a push-button must be pressed after each digit has been configured via toggle switches.
  
 module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl, 
-	isGuest_ctrl, intID_ctrl, matchID);
+	isGuest_ctrl, intID_ctrl, status);
 
    input clk, rst, pwenter, log_out_ctrl;
    input [3:0] pwdigit; 
 
-   output matchID;
    output log_in_ctrl, isGuest_ctrl;
    output [2:0] intID_ctrl;
+	output [9:0] status;
 
    wire log_out, matchID, isGuest;
    wire [2:0] intID;
@@ -48,12 +48,10 @@ module Authentication(clk, rst, pwdigit, pwenter, log_out_ctrl, log_in_ctrl,
    UID_ROM  User_ROM(addr_UID_ROM, clk, q_UID_ROM);
    PW_ROM  Password_ROM(addr_PW_ROM, clk, q_PW_ROM);
 
-   ID_Checking   UserEnter(clk, rst, pwdigit, pwenter, log_out, 
-                           matchID, isGuest, intID,
-                           q_UID_ROM, addr_UID_ROM);
+   ID_Checking UserEnter(clk, rst, pwdigit, pwenter, log_out, matchID, isGuest, intID,
+                         q_UID_ROM, addr_UID_ROM);
 
-   PW_Checking   PasswordEnter(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_ctrl,
-                               log_out, isGuest_ctrl, intID_ctrl, log_in_ctrl, 
-                               q_PW_ROM, addr_PW_ROM);
+   PW_Checking PasswordEnter(clk, rst, pwdigit, pwenter, matchID, isGuest, intID, log_out_ctrl,
+                             log_out, isGuest_ctrl, intID_ctrl, log_in_ctrl, q_PW_ROM, addr_PW_ROM);
 
 endmodule
