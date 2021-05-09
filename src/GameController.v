@@ -1,6 +1,6 @@
 module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1, 
 	indIn2, isCorrect, timeOut, controlSig, logOut, pIDout, isGuestOut, 
-	score, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, 
+	scoreOnes, scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, 
 	timerReconfig, clk, rst);
 	input pwdPls, logOn, isGuestIn, startPls, loadPls, isCorrect, timeOut, clk, rst;
 	input [2:0] pIDin, indIn1, indIn2;
@@ -10,10 +10,8 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 	reg [1:0] lettNum, mode;
 	output [2:0] controlSig, pIDout, indOut1, indOut2;
 	reg [2:0] controlSig, pIDout, indOut1, indOut2;
-	output [3:0] modeDisp;
-	reg [3:0] modeDisp;
-	output [6:0] score;
-	reg [6:0] score;
+	output [3:0] modeDisp, scoreOnes, scoreTens;
+	reg [3:0] modeDisp, scoreOnes, scoreTens;
 	reg [3:0] State;
 	parameter INIT = 0, SETUP = 1, GAME = 2, GAMEOVER = 3, LOGOUT = 4, TOPSCORE = 5;
 
@@ -30,13 +28,14 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					timerEn <= 1'b0;
 					timerReconfig <= 1'b1;
 					mode <= 0;
+					scoreOnes <= 0;
+					scoreTens <= 0;
 					if (logOn == 1'b1) begin
 						State <= SETUP;
 					end
 				end
 				SETUP: begin
 					timerReconfig <= 1'b0;
-					score <= 0;
 					modeDisp <= mode+4;
 					controlSig <= 1;
 					if (pwdPls == 1'b1) begin
@@ -63,9 +62,15 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					indOut1 <= indIn1;
 					indOut2 <= indIn2;
 					lettNum <= mode;
-					if (isCorrect == 1'b1)
-						score <= score + 1;
-					if (timeOut == 1'b1) 
+					if (isCorrect == 1'b1) begin
+						if (scoreOnes==9) begin
+							scoreOnes <= 0;
+							scoreTens <= scoreTens+1;
+						end
+						else							
+							scoreOnes <= scoreOnes + 1;
+					end
+					else if (timeOut == 1'b1) 
 						State <= GAMEOVER;
 				end
 				GAMEOVER: begin

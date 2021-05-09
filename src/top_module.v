@@ -11,7 +11,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	timeOut, isGuestOut, scramPls, flipPls, timerEn, timerReconfig, en;
 	wire [1:0] lettNum;
 	wire [2:0] intID_ctrl, controlSig, pIDout, indOut1, indOut2;
-	wire [3:0] modeDisp;
+	wire [3:0] modeDisp, scoreOnes, scoreTens;
 	wire [4:0] intIDout;
 	wire [6:0] score, Display1, Display2, Display3, Display4, Display5, Display6,
 	topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, 
@@ -28,13 +28,12 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	ButtonShaper StartShaper(start, start_Out, clk, rst);
 	ButtonShaper ChangeShaper(change, change_Out, clk, rst);
 	
-	GameController GameController1(pass_Out, 1'b1, 1'b1, 1'b0,
-	start_Out, change_Out, PI1,
-	PI2, isCorrect, timeOut, controlSig, log_out_ctrl, pIDout, isGuestOut, score,lettNum, 
-	modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
+	GameController GameController1(pass_Out, 1'b1, 1'b1, 1'b0, start_Out, 
+	change_Out, PI1, PI2, isCorrect, timeOut, controlSig, log_out_ctrl, pIDout, isGuestOut, scoreOnes, 
+	scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	
-	score_top score_top1(controlSig, isGuestOut, pIDout, score, topIDOne, topIDTwo, 
-	topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
+	score_top score_top1(controlSig, isGuestOut, pIDout, scoreOnes, 
+	scoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
 	
 	LED_Timer LED_Timer1(timerReconfig, timerEn, timerSig, timeOut, clk, rst);
 	
@@ -44,7 +43,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	
 	LED_Mux Multiplexer1(controlSig, 10'b1100000000, timerSig, LEDs);
 	Disp_Mux Multiplexer2(controlSig, modeDisp_out, Display1, Display2, Display3, Display4, 
-	Display5, Display6, topScoreOnes, topScoreTens, topIDFour, topIDThree, topIDTwo, topIDOne, 
+	Display5, Display6, topScoreOnes, topScoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, 
 	Disp1, Disp2, Disp3, Disp4, Disp5, Disp6);
 
 endmodule
