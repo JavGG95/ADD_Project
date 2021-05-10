@@ -27,7 +27,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	ButtonShaper StartShaper(start, start_Out, clk, rst);
 	ButtonShaper ChangeShaper(change, change_Out, clk, rst);
 	
-	GameController GameController1(pass_Out, 1'b1, 1'b1, 1'b0, start_Out, 
+	GameController GameController1(pass_Out, log_in_ctrl, intID_ctrl, isGuest_ctrl, start_Out, 
 	change_Out, PI1, PI2, isCorrect, timeOut, controlSig, log_out_ctrl, pIDout, isGuestOut, scoreOnes, 
 	scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	
@@ -40,7 +40,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	Display2, Display3, Display4, Display5, Display6, en, isCorrect, clk, rst);
 	dec_7seg dec_7seg1(modeDisp, modeDisp_out);
 	
-	LED_Mux Multiplexer1(controlSig, 10'b1100000000, timerSig, LEDs);
+	LED_Mux Multiplexer1(controlSig, authSig, timerSig, LEDs);
 	Disp_Mux Multiplexer2(controlSig, modeDisp_out, Display1, Display2, Display3, Display4, 
 	Display5, Display6, topScoreOnes, topScoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, 
 	Disp1, Disp2, Disp3, Disp4, Disp5, Disp6, clk, rst);

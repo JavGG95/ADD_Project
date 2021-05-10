@@ -1,36 +1,8 @@
-C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Scoring_RAM
-
-Top level modules:
-	Scoring_RAM
-
-} {} {}} C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Scoring
 
 Top level modules:
 	Scoring
-
-} {} {}} C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Score_RAM
-
-Top level modules:
-	Score_RAM
-
-} {} {}} C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM_bb.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM_bb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Scoring_RAM
-
-Top level modules:
-	Scoring_RAM
-
-} {} {}} C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM.v {1 {vlog -work work -stats=none C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Score_RAM
-
-Top level modules:
-	Score_RAM
 
 } {} {}}

@@ -32,21 +32,16 @@ state.wait3 1 0 0 1 0
 state.Done 0 0 0 1 1 
 
 State Machine - |top_module|score_top:score_top1|Scoring:Scoring1|nextState
-Name nextState.UPDATE nextState.FETCH nextState.SEND nextState.CHECK 
-nextState.FETCH 0 0 0 0 
-nextState.CHECK 0 1 0 1 
-nextState.UPDATE 1 1 0 0 
-nextState.SEND 0 1 1 0 
+Name 
+nextState.SEND 
 
 State Machine - |top_module|score_top:score_top1|Scoring:Scoring1|State
-Name State.WAIT State.SEND State.RETRIEVE State.UPDATE State.CHECK State.FETCH State.INIT 
-State.INIT 0 0 0 0 0 0 0 
-State.FETCH 0 0 0 0 0 1 1 
-State.CHECK 0 0 0 0 1 0 1 
-State.UPDATE 0 0 0 1 0 0 1 
-State.RETRIEVE 0 0 1 0 0 0 1 
-State.SEND 0 1 0 0 0 0 1 
-State.WAIT 1 0 0 0 0 0 1 
+Name State.WAIT State.RETRIEVE State.CHECK State.INIT State.SEND 
+State.INIT 0 0 0 0 0 
+State.CHECK 0 0 1 1 0 
+State.RETRIEVE 0 1 0 1 0 
+State.SEND 0 0 0 1 1 
+State.WAIT 1 0 0 1 0 
 
 State Machine - |top_module|GameController:GameController1|State
 Name State.TOPSCORE State.LOGOUT State.GAMEOVER State.GAME State.SETUP State.INIT 

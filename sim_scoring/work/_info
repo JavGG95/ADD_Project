@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Windows/system32
 vScore_RAM
-Z0 !s110 1620634992
+Z0 !s110 1620637458
 !i10b 1
 !s100 ShhnMh7k3BJZ?ZbWmc6^D3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,19 +20,67 @@ Z3 dC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring
 w1620275309
 8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v
 FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v
-!i122 62
+!i122 122
 Z4 L0 35 21
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1620634992.000000
+Z6 !s108 1620637458.000000
 !s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM_bb.v|
 !i113 1
 Z7 o-work work
 Z8 tCvgOpt 0
 n@score_@r@a@m
+vScore_RAM2
+Z9 !s110 1620637459
+!i10b 1
+!s100 zJ1a6Ga_OCYLPGzHof^1>0
+R1
+IG]gR=L1NGeah`X:3bQ04=1
+R2
+R3
+w1620636776
+8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM2.v
+FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM2.v
+!i122 125
+L0 40 65
+R5
+r1
+!s85 0
+31
+Z10 !s108 1620637459.000000
+!s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM2.v|
+!i113 1
+R7
+R8
+n@score_@r@a@m2
+vScore_RAM3
+R9
+!i10b 1
+!s100 g8YD=6^^k8_RN6FTdEOk90
+R1
+I?]<`H:LAZ?28;>bQLACDT2
+R2
+R3
+w1620637310
+8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM3.v
+FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM3.v
+!i122 126
+L0 40 71
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Score_RAM3.v|
+!i113 1
+R7
+R8
+n@score_@r@a@m3
 vScoring
 R0
 !i10b 1
@@ -44,13 +92,13 @@ R3
 w1620633350
 8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v
 FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v
-!i122 59
+!i122 119
 L0 1 128
 R5
 r1
 !s85 0
 31
-!s108 1620634991.000000
+R6
 !s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring.v|
 !i113 1
@@ -58,7 +106,7 @@ R7
 R8
 n@scoring
 vScoring_RAM
-R0
+R9
 !i10b 1
 !s100 L?UC;GDE7bVI_iDYQL>mX3
 R1
@@ -68,7 +116,7 @@ R3
 w1620634934
 8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM_bb.v
 FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring_RAM_bb.v
-!i122 64
+!i122 124
 R4
 R5
 r1
@@ -87,19 +135,19 @@ R2
 r1
 !s85 0
 !i10b 1
-!s100 zLEWWA6niblD8C`RhZTBj0
-I5YGDgSC1H3jS:Q;S3nJNJ2
+!s100 ;j[1nI4S5Cn_6VAgHm?;h0
+Iof0a57WnVf6O<Zj9RXN=C1
 R3
-Z9 w1620634590
-Z10 8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v
-Z11 FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v
-!i122 60
-L0 3 91
+Z11 w1620637455
+Z12 8C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v
+Z13 FC:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v
+!i122 120
+L0 3 92
 R5
 31
 R6
-Z12 !s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v|
-Z13 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v|
+Z14 !s107 C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/testbench_Scoring.v|
 !i113 1
 R7
 R8
@@ -107,25 +155,25 @@ ntestbench_@scoring
 Xtestbench_Scoring_v_unit
 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
 R0
-VUDG^15Hf8o3gAM:3;YH>o0
+VaTXIRTT;XPnE:;h4UWQ3V0
 r1
 !s85 0
 !i10b 1
-!s100 [8kTeQZgC1[7CU_C3V2hM1
-IUDG^15Hf8o3gAM:3;YH>o0
+!s100 TWWhI4`QiGQ@Mn0P;RG@Y1
+IaTXIRTT;XPnE:;h4UWQ3V0
 !i103 1
 S1
 R3
-R9
-R10
 R11
-!i122 60
+R12
+R13
+!i122 120
 L0 1 0
 R5
 31
 R6
-R12
-R13
+R14
+R15
 !i113 1
 R7
 R8

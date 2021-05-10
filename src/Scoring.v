@@ -1,116 +1,72 @@
-module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, scoreRAM_Dout, scoreRAM_RW, scoreRAM_Din, 
-					scoreRAM_Addr, topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
+module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, topID, intIDout, topIDOne, topIDTwo, 
+					topIDThree, topIDFour, scoreOnesOut, scoreTensOut, clk, rst);
 	input isGuest, clk, rst;
 	input [2:0] controlSig, intIDin;
 	input [3:0] scoreOnes, scoreTens;
-	input [15:0] scoreRAM_Dout;
-	output scoreRAM_RW;
-	reg scoreRAM_RW, updated;
-	output [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
-	reg [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
-	output [4:0] scoreRAM_Addr;
-	reg [4:0] scoreRAM_Addr, Global, Cycle, Count;
-	output [15:0] scoreRAM_Din;
-	reg [15:0] scoreRAM_Din, score;
+	input [15:0] topID;
+	output [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut;
+	reg [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut;
+	output [4:0] intIDout;
+	reg [4:0] intIDout;
+	reg checked, retrieved;
+	reg [2:0] Cycle, topIntID;
+	reg [7:0] score, topScore;
 	reg [2:0] State, nextState;
-	parameter INIT = 0, FETCH = 1, CHECK = 2, UPDATE = 3, RETRIEVE = 4, SEND = 5, WAIT = 6;
+	parameter INIT = 0, CHECK = 2, RETRIEVE = 4, SEND = 5, WAIT = 6;
 
 	always @(posedge clk) begin
-		if (rst==1'b0)
-			State <= INIT; 
+		if (rst==1'b0) begin
+			topScore <= 0;
+			topIntID <= 0;
+			State <= INIT;
+		end	
 		else begin
 			case (State)
 				INIT: begin
-					if (controlSig==3) begin
-						topScoreOnes <= 4;
-						topScoreTens <= scoreTens;
-						score <= {4'b0000, scoreTens, scoreOnes};
-						if (isGuest==1'b0 && updated==1'b0) begin
-							Global <= 0;
-							State <= FETCH;
-						end
-						else
-							updated <= 1'b0;
+					if (controlSig<3) begin
+						checked <= 1'b0;
+						retrieved <= 1'b0;
 					end
-					else if (controlSig==4)
-						State <= RETRIEVE;									
-				end
-				FETCH: begin
-					scoreRAM_RW <= 1'b0;
-					Cycle <= 0;
-					State <= WAIT;
-					nextState <= CHECK;
-					if (Global==1'b1) begin
-						Count <= 0;
-						scoreRAM_Addr <= 1;
-					end
-					else if (Global==1'b0) begin
-						scoreRAM_Addr <= 2*intIDin+1;
-					end
+					else if (controlSig>3 && retrieved==1'b0)
+						State <= RETRIEVE;
 					else begin
-						updated <= 1'b1;
-						State <= INIT;
+						scoreOnesOut <= scoreOnes;
+						scoreTensOut <= scoreTens;
+						score <= {scoreTens, scoreOnes};
+						if (isGuest==1'b0 && checked==1'b0)
+							State <= CHECK;
 					end
 				end
 				CHECK: begin
-					if (scoreRAM_Dout < score)
-						State <= UPDATE;
-					else begin
-						State <= FETCH;
-						Global <= Global+1;
+					if (score >= topScore) begin
+						topScore <= score;
+						topIntID <= intIDin;
 					end
-				end
-				UPDATE: begin
-					scoreRAM_RW <= 1'b1;
-					scoreRAM_Din <= score;
-					Cycle <= 0;
-					State <= WAIT;
-					nextState <= FETCH;
-					if (Global==1'b1) begin
-						if (Count==2) begin
-							scoreRAM_Addr <= 0;
-							scoreRAM_Din <= scoreRAM_Dout;
-						end
-						else if (Count==1) begin
-							scoreRAM_RW <= 1'b0;
-							scoreRAM_Addr <= 2*intIDin;
-							Cycle <= 0;
-							Count <= Count+1;
-							nextState <= UPDATE;	
-						end
-						else begin
-							Count <= Count+1;
-							nextState <= UPDATE;	
-						end				
-					end
-					else
-						Global <= Global+1;
+					checked <= 1'b1;
+					State <= INIT;
 				end
 				RETRIEVE: begin
-					scoreRAM_RW <= 1'b0;
-					scoreRAM_Addr <= 0;
+					intIDout <= topIntID;
 					Cycle <= 0;
 					State <= WAIT;
 					nextState <= SEND;		
 				end
 				SEND: begin
-					if (scoreRAM_Addr==0) begin
-						topIDOne <= scoreRAM_Dout[3:0];
-						topIDTwo <= scoreRAM_Dout[7:4];
-						topIDThree <= scoreRAM_Dout[11:8];
-						topIDFour <= scoreRAM_Dout[15:12];
-						scoreRAM_Addr <= 1;
-						Cycle <= 0;
-						State <= WAIT;	
+					if (topIntID==1'b0) begin
+						topIDOne <= 0;
+						topIDTwo <= 0;
+						topIDThree <= 0;
+						topIDFour <= 0;
 					end
 					else begin
-						if (controlSig==1)
-							State <= INIT;
-						else begin
-							topScoreOnes <= scoreRAM_Dout[3:0];
-							topScoreTens <= scoreRAM_Dout[7:4];
-						end
-					end						
+						topIDOne <= topID[3:0];
+						topIDTwo <= topID[7:4];
+						topIDThree <= topID[11:8];
+						topIDFour <= topID[15:12];
+					end
+					scoreOnesOut <= topScore[3:0];
+					scoreTensOut <= topScore[7:4];
+					retrieved <= 1'b1;
 				end
 				WAIT: begin
 					if (Cycle > 3)
