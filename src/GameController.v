@@ -1,7 +1,21 @@
-module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1, 
-	indIn2, isCorrect, timeOut, controlSig, logOut, pIDout, isGuestOut, 
-	scoreOnes, scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, 
-	timerReconfig, clk, rst);
+// ECE 6370
+// Author: Javier Garcia, 1266111
+// Game Controller
+
+// This modules controls most of the other modules based on the state of the game. When
+// a player logs in, the module allows the player to choose the level when setting 
+// loadPls high. If the level is increased after 6 is displayed, the player enters the
+// top score viewing mode, at which point startPls cycles between showing the top score
+// and the top scorer's ID. Another loadPls returns the player to level select. Setting
+// startPls high during level select starts the game, and the module signals the LED timer
+// to begin counting down. During the game, the module passes the index values for the
+// Word Scrambler module to flip the indeces of letters, and tells it when to retrieve and
+// scramble new words. When the game is over, only the score is displayed, and startPls must
+// be set high to return to level select.
+
+module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1, indIn2, isCorrect, 
+	timeOut, controlSig, logOut, pIDout, isGuestOut, scoreOnes, scoreTens, lettNum, modeDisp, scramPls, 
+	indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	input pwdPls, logOn, isGuestIn, startPls, loadPls, isCorrect, timeOut, clk, rst;
 	input [2:0] pIDin, indIn1, indIn2;
 	output logOut, isGuestOut, scramPls, flipPls, timerEn, timerReconfig;

@@ -1,0 +1,48 @@
+Quartus Prime Archive log --	C:/Users/javgg/Documents/GitHub/ADD_Project/syn/top_module.qarlog
+
+Archive:	C:/Users/javgg/Documents/GitHub/ADD_Project/syn/top_module.qar
+Date:		Mon May 10 15:05:10 2021
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Authentication.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Counting_to_10.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Counting_to_100.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Disp_Mux.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/IDROM_Mux.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/ID_Checking.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/LED_Mux.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/LED_Timer.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/LoadRegister.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Mod.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Mod_checker.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Mod_top.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/One_ms_Timer.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/One_sec_Timer.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/PW_Checking.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/PW_ROM.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/RNG.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/ROM_TB.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_RAM.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scrambler_top.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/Shift_right.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/UID_ROM.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/WORDROM.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/bs.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/dec_7seg.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/handler.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/handler_top.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/scrambler.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/scrambler_checker.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/scrambler_done.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v
+C:/Users/javgg/Documents/GitHub/ADD_Project/syn/top_module.qpf
+C:/Users/javgg/Documents/GitHub/ADD_Project/syn/top_module.qsf
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 37 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

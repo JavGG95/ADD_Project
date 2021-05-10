@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_module
-Mon May 10 07:01:26 2021
+Mon May 10 07:39:14 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -83,7 +83,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 10 07:01:26 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 10 07:39:14 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_module                                  ;
 ; Top-level Entity Name           ; top_module                                  ;
@@ -1261,14 +1261,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 10 07:01:16 2021
+    Info: Processing started: Mon May 10 07:39:04 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_module -c top_module
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/led_mux.v
     Info (12023): Found entity 1: LED_Mux File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/LED_Mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/disp_mux.v
-    Info (12023): Found entity 1: Disp_Mux File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Disp_Mux.v Line: 1
+    Info (12023): Found entity 1: Disp_Mux File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Disp_Mux.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/wordrom.v
     Info (12023): Found entity 1: WORDROM File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/WORDROM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/uid_rom.v
@@ -1286,9 +1286,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/scrambler.v
     Info (12023): Found entity 1: scrambler File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/scrambler.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/scoring.v
-    Info (12023): Found entity 1: Scoring File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v Line: 1
+    Info (12023): Found entity 1: Scoring File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/score_top.v
-    Info (12023): Found entity 1: score_top File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 1
+    Info (12023): Found entity 1: score_top File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/score_ram.v
     Info (12023): Found entity 1: Score_RAM File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_RAM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/rom_tb.v
@@ -1322,7 +1322,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/handler.v
     Info (12023): Found entity 1: handler File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/handler.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/gamecontroller.v
-    Info (12023): Found entity 1: GameController File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 1
+    Info (12023): Found entity 1: GameController File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/dec_7seg.v
     Info (12023): Found entity 1: dec_7seg File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/dec_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/javgg/documents/github/add_project/src/counting_to_100.v
@@ -1384,15 +1384,15 @@ Info (12128): Elaborating entity "ID_Checking" for hierarchy "Authentication:Aut
 Info (12128): Elaborating entity "PW_Checking" for hierarchy "Authentication:Authentication1|PW_Checking:PasswordEnter" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Authentication.v Line: 55
 Info (12128): Elaborating entity "ButtonShaper" for hierarchy "ButtonShaper:PassShaper" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 26
 Info (12128): Elaborating entity "GameController" for hierarchy "GameController:GameController1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 32
-Warning (10230): Verilog HDL assignment warning at GameController.v(39): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 39
-Warning (10230): Verilog HDL assignment warning at GameController.v(49): truncated value with size 32 to match size of target (2) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 49
-Warning (10230): Verilog HDL assignment warning at GameController.v(67): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 67
-Warning (10230): Verilog HDL assignment warning at GameController.v(70): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 70
-Warning (10230): Verilog HDL assignment warning at GameController.v(90): truncated value with size 32 to match size of target (1) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 90
+Warning (10230): Verilog HDL assignment warning at GameController.v(53): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 53
+Warning (10230): Verilog HDL assignment warning at GameController.v(63): truncated value with size 32 to match size of target (2) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 63
+Warning (10230): Verilog HDL assignment warning at GameController.v(81): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 81
+Warning (10230): Verilog HDL assignment warning at GameController.v(84): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 84
+Warning (10230): Verilog HDL assignment warning at GameController.v(104): truncated value with size 32 to match size of target (1) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 104
 Info (12128): Elaborating entity "score_top" for hierarchy "score_top:score_top1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 35
-Info (12128): Elaborating entity "Scoring" for hierarchy "score_top:score_top1|Scoring:Scoring1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 15
-Warning (10230): Verilog HDL assignment warning at Scoring.v(76): truncated value with size 32 to match size of target (3) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v Line: 76
-Info (12128): Elaborating entity "dec_7seg" for hierarchy "score_top:score_top1|dec_7seg:dec_7seg1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 17
+Info (12128): Elaborating entity "Scoring" for hierarchy "score_top:score_top1|Scoring:Scoring1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Scoring.v(86): truncated value with size 32 to match size of target (3) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v Line: 86
+Info (12128): Elaborating entity "dec_7seg" for hierarchy "score_top:score_top1|dec_7seg:dec_7seg1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 25
 Info (12128): Elaborating entity "LED_Timer" for hierarchy "LED_Timer:LED_Timer1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 37
 Info (12128): Elaborating entity "One_sec_Timer" for hierarchy "LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/LED_Timer.v Line: 12
 Info (12128): Elaborating entity "One_ms_Timer" for hierarchy "LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|One_ms_Timer:One_ms_Timer_1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/One_sec_Timer.v Line: 11
@@ -1461,10 +1461,10 @@ Info (21057): Implemented 1106 device resources after synthesis - the final reso
     Info (21061): Implemented 941 logic cells
     Info (21064): Implemented 98 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Mon May 10 07:01:26 2021
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Mon May 10 07:39:14 2021
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

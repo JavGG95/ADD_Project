@@ -19,7 +19,10 @@ module testbench_GameControl();
 		timerReconfig, clk, rst);
 
 	initial begin
+		pwdPls = 1'b0; logOn = 1'b0;
+		startPls = 1'b0; loadPls = 1'b0;
 		pIDin = 1; isGuestIn = 1'b0;
+		isCorrect = 1'b0; timeOut = 1'b0;
 		
 		@(posedge clk);	@(posedge clk);
 		#5 rst = 1'b0;

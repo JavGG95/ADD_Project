@@ -1,3 +1,11 @@
+// ECE 6370
+// Author: Javier Garcia, 1266111
+// Scoreboard top module
+
+// This top module keeps track of the current top scorer's ID and score, and returns the
+// information requested by the Game Controller (player's score or top scorer). The output
+// signals are already the 7 bits required to display them.
+
 module score_top (controlSig, isGuest, intIDin, scoreOnes, scoreTens, topIDOne_out, topIDTwo_out, 
 	topIDThree_out, topIDFour_out, topScoreOnes_out, topScoreTens_out, clk, rst);
 
@@ -21,6 +29,4 @@ module score_top (controlSig, isGuest, intIDin, scoreOnes, scoreTens, topIDOne_o
 	dec_7seg dec_7seg5(topIDTwo, topIDTwo_out);
 	dec_7seg dec_7seg6(topIDOne, topIDOne_out);
 
-
-
-endmodule
+endmodule 

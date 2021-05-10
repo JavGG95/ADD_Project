@@ -1,3 +1,13 @@
+// ECE 6370
+// Author: Javier Garcia, 1266111
+// Scoring module
+
+// This module displays the player's score when a game is over, and checks it against
+// the current top score. If it is higher, the top score is updated and the player's 
+// internal ID is saved. When the top score is requested, the module uses the saved
+// internal ID to retrieve the top scorer's ID from the UID_ROM, and outputs it along 
+// with the current top score. 
+
 module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, topID, intIDout, topIDOne, topIDTwo, 
 					topIDThree, topIDFour, scoreOnesOut, scoreTensOut, clk, rst);
 	input isGuest, clk, rst;

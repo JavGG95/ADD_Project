@@ -1,5 +1,5 @@
 Info (10281): Verilog HDL Declaration information at scrambler_checker.v(5): object "done" differs only in case from object "Done" in the same scope File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/scrambler_checker.v Line: 5
 Info (10281): Verilog HDL Declaration information at Mod_checker.v(6): object "done" differs only in case from object "Done" in the same scope File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Mod_checker.v Line: 6
 Info (10281): Verilog HDL Declaration information at handler.v(15): object "display" differs only in case from object "Display" in the same scope File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/handler.v Line: 15
-Warning (10268): Verilog HDL information at GameController.v(18): always construct contains both blocking and non-blocking assignments File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 18
-Info (10281): Verilog HDL Declaration information at GameController.v(7): object "logOut" differs only in case from object "LOGOUT" in the same scope File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 7
+Warning (10268): Verilog HDL information at GameController.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 32
+Info (10281): Verilog HDL Declaration information at GameController.v(21): object "logOut" differs only in case from object "LOGOUT" in the same scope File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 21

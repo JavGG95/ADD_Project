@@ -14,9 +14,8 @@ module testbench_GameControl();
 		#10;
 	end
 
-	GameController DUT_GameControl1er1(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1, indIn2, isCorrect, timeOut, 
-		controlSig, logOut, pIDout, isGuestOut, scoreOnes, scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, 
-		timerReconfig, clk, rst);
+	GameController DUT_GameControl1er1(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1, indIn2, isCorrect, timeOut, controlSig, logOut, 
+		pIDout, isGuestOut, scoreOnes, scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 
 	initial begin
 		pwdPls = 1'b0; logOn = 1'b0;
