@@ -1,11 +1,9 @@
 `timescale 1 ns/100 ps;
 
 module testbench_Scoring ();
-	reg clk, rst;
 	reg isGuest, clk, rst;
 	reg [2:0] controlSig, intIDin;
 	reg [3:0] scoreOnes, scoreTens;
-	reg scoreRAM_RW;
 	wire [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut;
 	wire [4:0] intIDout;
 	wire [15:0] topID;
@@ -22,7 +20,8 @@ module testbench_Scoring ();
 	UID_ROM Score_ROM (intIDout, clk, topID);
 
 	initial begin
-
+		isGuest = 0; controlSig = 0;
+	
 	end
 
 endmodule

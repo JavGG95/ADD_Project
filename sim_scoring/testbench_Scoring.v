@@ -4,7 +4,6 @@ module testbench_Scoring ();
 	reg isGuest, clk, rst;
 	reg [2:0] controlSig, intIDin;
 	reg [3:0] scoreOnes, scoreTens;
-	reg scoreRAM_RW;
 	wire [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut;
 	wire [4:0] intIDout;
 	wire [15:0] topID;
@@ -21,7 +20,39 @@ module testbench_Scoring ();
 	UID_ROM Score_ROM (intIDout, clk, topID);
 
 	initial begin
+		rst = 1'b1;
+		isGuest = 1'b0; controlSig = 0; intIDin = 1; 
+		scoreOnes = 4; scoreTens = 0;
 
+		@(posedge clk); @(posedge clk);
+		#5 rst = 1'b0; @(posedge clk);
+		#5 rst = 1'b1; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		#5 controlSig = 3; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		#5 controlSig = 4; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		#5 controlSig = 2; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		#5 intIDin = 2; scoreTens = 1;
+		@(posedge clk); @(posedge clk);
+		#5 controlSig = 3; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		#5 controlSig = 4; @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
+		@(posedge clk); @(posedge clk);
 	end
 
 endmodule

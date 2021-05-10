@@ -67,6 +67,7 @@ module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, topID, intIDo
 					scoreOnesOut <= topScore[3:0];
 					scoreTensOut <= topScore[7:4];
 					retrieved <= 1'b1;
+					State <= INIT;
 				end
 				WAIT: begin
 					if (Cycle > 3)

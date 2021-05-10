@@ -20,3 +20,140 @@ project open C:/Users/javgg/Documents/GitHub/ADD_Project/sim_scoring/Scoring
 # Compile of testbench_Scoring.v was successful with warnings.
 # Compile of UID_ROM.v was successful.
 # 3 compiles, 0 failed with no errors.
+# Compile of Scoring.v was successful.
+# Compile of testbench_Scoring.v was successful with warnings.
+# Compile of UID_ROM.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of Scoring.v was successful.
+# Compile of testbench_Scoring.v was successful with warnings.
+# Compile of UID_ROM.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Scoring -L altera_mf_ver -L altera_mf
+# vsim -gui work.testbench_Scoring -L altera_mf_ver -L altera_mf 
+# Start time: 06:37:31 on May 10,2021
+# Loading work.testbench_Scoring
+# Loading work.Scoring
+# Loading work.UID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/testbench_Scoring/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 06:40:22 on May 10,2021, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 8
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring 
+# Start time: 06:42:18 on May 10,2021
+# Loading work.testbench_Scoring
+# Loading work.Scoring
+# Loading work.UID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+run
+add wave sim:/testbench_Scoring/*
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -r /*
+add wave -position 348  -autoscale 1 -format Literal -height 17
+# Missing signal name or pattern.
+quit -sim
+# End time: 06:48:08 on May 10,2021, Elapsed time: 0:05:50
+# Errors: 0, Warnings: 1
+# Compile of Scoring.v was successful.
+# Compile of testbench_Scoring.v was successful with warnings.
+# Compile of UID_ROM.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring 
+# Start time: 06:53:22 on May 10,2021
+# Loading work.testbench_Scoring
+# Loading work.Scoring
+# Loading work.UID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/testbench_Scoring/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 06:56:41 on May 10,2021, Elapsed time: 0:03:19
+# Errors: 0, Warnings: 2
+# Compile of Scoring.v was successful.
+# Compile of testbench_Scoring.v was successful with warnings.
+# Compile of UID_ROM.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Scoring 
+# Start time: 06:57:06 on May 10,2021
+# Loading work.testbench_Scoring
+# Loading work.Scoring
+# Loading work.UID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+add wave sim:/testbench_Scoring/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
