@@ -6,7 +6,7 @@ module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, scoreRAM_Dout
 	input [3:0] scoreOnes, scoreTens;
 	input [15:0] scoreRAM_Dout;
 	output scoreRAM_RW;
-	reg scoreRAM_RW updated;
+	reg scoreRAM_RW, updated;
 	output [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
 	reg [3:0] topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens;
 	output [4:0] scoreRAM_Addr;
@@ -23,14 +23,15 @@ module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, scoreRAM_Dout
 			case (State)
 				INIT: begin
 					if (controlSig==3) begin
-						topScoreOnes <= 4;
+						topScoreOnes <= scoreOnes;
 						topScoreTens <= scoreTens;
 						score <= {4'b0000, scoreTens, scoreOnes};
 						if (isGuest==1'b0 && updated==1'b0) begin
 							Global <= 0;
 							State <= FETCH;
+						end
 						else
-							updated==1'b0;
+							updated <= 1'b0;
 					end
 					else if (controlSig>3)
 						State <= RETRIEVE;									
@@ -40,19 +41,20 @@ module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, scoreRAM_Dout
 					Cycle <= 0;
 					State <= WAIT;
 					nextState <= CHECK;
-					if (Global==1'b0)
-						scoreRAM_Addr <= 1;
-					else if (Global==1'b1) begin
+					if (Global==1'b1) begin
 						Count <= 0;
+						scoreRAM_Addr <= 1;
+					end
+					else if (Global==1'b0) begin
 						scoreRAM_Addr <= 2*intIDin+1;
 					end
 					else begin
-						updated==1'b1;
+						updated <= 1'b1;
 						State <= INIT;
 					end
 				end
 				CHECK: begin
-					if (scoreRAM_Dout > score)
+					if (scoreRAM_Dout < score)
 						State <= UPDATE;
 					else begin
 						State <= FETCH;

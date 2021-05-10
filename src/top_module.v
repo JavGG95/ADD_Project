@@ -28,7 +28,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	ButtonShaper StartShaper(start, start_Out, clk, rst);
 	ButtonShaper ChangeShaper(change, change_Out, clk, rst);
 	
-	GameController GameController1(pass_Out, 1'b1, 1'b1, 1'b0, start_Out, 
+	GameController GameController1(pass_Out, log_in_ctrl, intID_ctrl, isGuest_ctrl, start_Out, 
 	change_Out, PI1, PI2, isCorrect, timeOut, controlSig, log_out_ctrl, pIDout, isGuestOut, scoreOnes, 
 	scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	
