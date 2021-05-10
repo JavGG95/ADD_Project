@@ -232,6 +232,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "PI2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PI2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PI2[2]",
+					"strict" : false
+				},
+				{
 					"name" : "PI1[0]",
 					"strict" : false
 				},
@@ -241,34 +253,6 @@
 				},
 				{
 					"name" : "PI1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "PI2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "PI2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "PI2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Pass_digit[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Pass_digit[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Pass_digit[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Pass_digit[2]",
 					"strict" : false
 				}
 			]

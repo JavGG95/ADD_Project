@@ -1,0 +1,30 @@
+# Current time Mon May 10 03:02:31 2021
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+# Signature = 4a3706afe29a2b87def93ebd4f2693fa
+# 0    0x00a44d10: '<unknown (@0xa44d10)>'
+# 1    0x63363462: '_libm_sse2_atanf + 0x528' in 'c:\windows\system32\msvcr120.dll'
+# 2    0x00d336b9: '<unknown (@0xd336b9)>'
+# 3    0x00d41a29: '<unknown (@0xd41a29)>'
+# End of Stack Trace
+
+
+# Current time Mon May 10 03:07:51 2021
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+# Signature = 4a3706afe29a2b87def93ebd4f2693fa
+# 0    0x00a44d10: '<unknown (@0xa44d10)>'
+# 1    0x63363462: '_libm_sse2_atanf + 0x528' in 'c:\windows\system32\msvcr120.dll'
+# 2    0x00d336b9: '<unknown (@0xd336b9)>'
+# 3    0x00d41a29: '<unknown (@0xd41a29)>'
+# End of Stack Trace
+
+

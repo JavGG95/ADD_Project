@@ -39,7 +39,6 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 					modeDisp <= mode+4;
 					controlSig <= 1;
 					if (pwdPls == 1'b1) begin
-						logOut <= 1'b1;
 						State <= LOGOUT;
 					end
 					else if (loadPls == 1'b1) begin
@@ -70,6 +69,8 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 						else							
 							scoreOnes <= scoreOnes + 1;
 					end
+					else if (pwdPls == 1'b1)
+						State <= INIT;
 					else if (timeOut == 1'b1) 
 						State <= GAMEOVER;
 				end

@@ -79,7 +79,7 @@ module Scoring(controlSig, isGuest, intIDin, score, playerID, scoreRAM_Dout, int
 					scoreRAM_RW <= 1'b0;
 					scoreRAM_Addr <= 0;
 					Cycle <= 0;
-					State <= WAIT
+					State <= WAIT;
 					nextState <= SEND;		
 				end
 				SEND: begin
