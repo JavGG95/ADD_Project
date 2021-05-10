@@ -14,7 +14,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	wire [3:0] modeDisp, scoreOnes, scoreTens;
 	wire [4:0] intIDout;
 	wire [6:0] score, Display1, Display2, Display3, Display4, Display5, Display6,
-	topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, modeDisp_out;
+	topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut, modeDisp_out;
 	wire [9:0] authSig, timerSig;
 	wire [15:0] playerID;
 	
@@ -32,7 +32,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	scoreTens, lettNum, modeDisp, scramPls, indOut1, indOut2, flipPls, timerEn, timerReconfig, clk, rst);
 	
 	score_top score_top1(controlSig, isGuestOut, pIDout, scoreOnes, 
-	scoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, topScoreOnes, topScoreTens, clk, rst);
+	scoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, scoreOnesOut, scoreTensOut, clk, rst);
 	
 	LED_Timer LED_Timer1(timerReconfig, timerEn, timerSig, timeOut, clk, rst);
 	
@@ -42,7 +42,7 @@ module top_module (start, change, password, LEDs, PI1, PI2, Pass_digit, Disp1, D
 	
 	LED_Mux Multiplexer1(controlSig, authSig, timerSig, LEDs);
 	Disp_Mux Multiplexer2(controlSig, modeDisp_out, Display1, Display2, Display3, Display4, 
-	Display5, Display6, topScoreOnes, topScoreTens, topIDOne, topIDTwo, topIDThree, topIDFour, 
+	Display5, Display6, scoreOnesOut, scoreTensOut, topIDOne, topIDTwo, topIDThree, topIDFour, 
 	Disp1, Disp2, Disp3, Disp4, Disp5, Disp6, clk, rst);
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_module
-Mon May 10 05:22:55 2021
+Mon May 10 06:11:24 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -26,40 +26,37 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  18. State Machine - |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|State
  19. State Machine - |top_module|Authentication:Authentication1|ID_Checking:UserEnter|State
  20. Registers Removed During Synthesis
- 21. Removed Registers Triggering Further Register Optimizations
- 22. General Register Statistics
- 23. Multiplexer Restructuring Statistics (Restructuring Performed)
- 24. Source assignments for Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated
- 25. Source assignments for Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated
- 26. Source assignments for score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated
- 27. Source assignments for handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated
- 28. Parameter Settings for User Entity Instance: Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component
- 29. Parameter Settings for User Entity Instance: Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component
- 30. Parameter Settings for User Entity Instance: Authentication:Authentication1|ID_Checking:UserEnter
- 31. Parameter Settings for User Entity Instance: Authentication:Authentication1|PW_Checking:PasswordEnter
- 32. Parameter Settings for User Entity Instance: ButtonShaper:PassShaper
- 33. Parameter Settings for User Entity Instance: ButtonShaper:StartShaper
- 34. Parameter Settings for User Entity Instance: ButtonShaper:ChangeShaper
- 35. Parameter Settings for User Entity Instance: GameController:GameController1
- 36. Parameter Settings for User Entity Instance: score_top:score_top1|Scoring:Scoring1
- 37. Parameter Settings for User Entity Instance: score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component
- 38. Parameter Settings for User Entity Instance: handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1
- 39. Parameter Settings for User Entity Instance: handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1
- 40. Parameter Settings for User Entity Instance: handler_top:handler_top1|handler:handler1
- 41. Parameter Settings for User Entity Instance: handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component
- 42. Parameter Settings for User Entity Instance: Disp_Mux:Multiplexer2
- 43. altsyncram Parameter Settings by Entity Instance
- 44. Port Connectivity Checks: "Disp_Mux:Multiplexer2"
- 45. Port Connectivity Checks: "LED_Mux:Multiplexer1"
- 46. Port Connectivity Checks: "handler_top:handler_top1|RNG:RNG1"
- 47. Port Connectivity Checks: "handler_top:handler_top1"
- 48. Port Connectivity Checks: "GameController:GameController1"
- 49. Port Connectivity Checks: "Authentication:Authentication1|PW_Checking:PasswordEnter"
- 50. Port Connectivity Checks: "Authentication:Authentication1"
- 51. Post-Synthesis Netlist Statistics for Top Partition
- 52. Elapsed Time Per Partition
- 53. Analysis & Synthesis Messages
- 54. Analysis & Synthesis Suppressed Messages
+ 21. General Register Statistics
+ 22. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 23. Source assignments for Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated
+ 24. Source assignments for Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated
+ 25. Source assignments for score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated
+ 26. Source assignments for handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated
+ 27. Parameter Settings for User Entity Instance: Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: Authentication:Authentication1|ID_Checking:UserEnter
+ 30. Parameter Settings for User Entity Instance: Authentication:Authentication1|PW_Checking:PasswordEnter
+ 31. Parameter Settings for User Entity Instance: ButtonShaper:PassShaper
+ 32. Parameter Settings for User Entity Instance: ButtonShaper:StartShaper
+ 33. Parameter Settings for User Entity Instance: ButtonShaper:ChangeShaper
+ 34. Parameter Settings for User Entity Instance: GameController:GameController1
+ 35. Parameter Settings for User Entity Instance: score_top:score_top1|Scoring:Scoring1
+ 36. Parameter Settings for User Entity Instance: score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1
+ 38. Parameter Settings for User Entity Instance: handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1
+ 39. Parameter Settings for User Entity Instance: handler_top:handler_top1|handler:handler1
+ 40. Parameter Settings for User Entity Instance: handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component
+ 41. Parameter Settings for User Entity Instance: Disp_Mux:Multiplexer2
+ 42. altsyncram Parameter Settings by Entity Instance
+ 43. Port Connectivity Checks: "Disp_Mux:Multiplexer2"
+ 44. Port Connectivity Checks: "handler_top:handler_top1|RNG:RNG1"
+ 45. Port Connectivity Checks: "handler_top:handler_top1"
+ 46. Port Connectivity Checks: "GameController:GameController1"
+ 47. Port Connectivity Checks: "Authentication:Authentication1|PW_Checking:PasswordEnter"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -86,16 +83,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 10 05:22:55 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 10 06:11:24 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; top_module                                  ;
 ; Top-level Entity Name           ; top_module                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 397                                         ;
+; Total registers                 ; 535                                         ;
 ; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,752                                       ;
+; Total block memory bits         ; 3,136                                       ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -267,27 +264,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 417       ;
+; Estimate of Logic utilization (ALMs needed) ; 516       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 580       ;
-;     -- 7 input functions                    ; 45        ;
-;     -- 6 input functions                    ; 173       ;
-;     -- 5 input functions                    ; 116       ;
-;     -- 4 input functions                    ; 109       ;
-;     -- <=3 input functions                  ; 137       ;
+; Combinational ALUT usage for logic          ; 709       ;
+;     -- 7 input functions                    ; 47        ;
+;     -- 6 input functions                    ; 235       ;
+;     -- 5 input functions                    ; 134       ;
+;     -- 4 input functions                    ; 108       ;
+;     -- <=3 input functions                  ; 185       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 397       ;
+; Dedicated logic registers                   ; 535       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 67        ;
 ; Total MLAB memory bits                      ; 0         ;
-; Total block memory bits                     ; 2752      ;
+; Total block memory bits                     ; 3136      ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 455       ;
-; Total fan-out                               ; 4381      ;
-; Average fan-out                             ; 3.75      ;
+; Maximum fan-out                             ; 633       ;
+; Total fan-out                               ; 5607      ;
+; Average fan-out                             ; 3.80      ;
 +---------------------------------------------+-----------+
 
 
@@ -296,12 +293,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name       ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |top_module                                        ; 580 (1)             ; 397 (0)                   ; 2752              ; 0          ; 67   ; 0            ; |top_module                                                                                                                           ; top_module        ; work         ;
+; |top_module                                        ; 709 (0)             ; 535 (0)                   ; 3136              ; 0          ; 67   ; 0            ; |top_module                                                                                                                           ; top_module        ; work         ;
+;    |Authentication:Authentication1|                ; 140 (0)             ; 129 (0)                   ; 320               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1                                                                                            ; Authentication    ; work         ;
+;       |ID_Checking:UserEnter|                      ; 68 (68)             ; 54 (54)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|ID_Checking:UserEnter                                                                      ; ID_Checking       ; work         ;
+;       |PW_Checking:PasswordEnter|                  ; 72 (72)             ; 75 (75)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter                                                                  ; PW_Checking       ; work         ;
+;       |PW_ROM:Password_ROM|                        ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|PW_ROM:Password_ROM                                                                        ; PW_ROM            ; work         ;
+;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component                                        ; altsyncram        ; work         ;
+;             |altsyncram_0ff1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated         ; altsyncram_0ff1   ; work         ;
+;       |UID_ROM:User_ROM|                           ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|UID_ROM:User_ROM                                                                           ; UID_ROM           ; work         ;
+;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component                                           ; altsyncram        ; work         ;
+;             |altsyncram_shf1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated            ; altsyncram_shf1   ; work         ;
 ;    |ButtonShaper:ChangeShaper|                     ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|ButtonShaper:ChangeShaper                                                                                                 ; ButtonShaper      ; work         ;
 ;    |ButtonShaper:PassShaper|                       ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|ButtonShaper:PassShaper                                                                                                   ; ButtonShaper      ; work         ;
 ;    |ButtonShaper:StartShaper|                      ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|ButtonShaper:StartShaper                                                                                                  ; ButtonShaper      ; work         ;
 ;    |Disp_Mux:Multiplexer2|                         ; 43 (43)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|Disp_Mux:Multiplexer2                                                                                                     ; Disp_Mux          ; work         ;
-;    |GameController:GameController1|                ; 38 (38)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|GameController:GameController1                                                                                            ; GameController    ; work         ;
+;    |GameController:GameController1|                ; 38 (38)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|GameController:GameController1                                                                                            ; GameController    ; work         ;
 ;    |LED_Mux:Multiplexer1|                          ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Mux:Multiplexer1                                                                                                      ; LED_Mux           ; work         ;
 ;    |LED_Timer:LED_Timer1|                          ; 51 (0)              ; 46 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Timer:LED_Timer1                                                                                                      ; LED_Timer         ; work         ;
 ;       |Counting_to_10:Counting_to_10_1|            ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Timer:LED_Timer1|Counting_to_10:Counting_to_10_1                                                                      ; Counting_to_10    ; work         ;
@@ -310,25 +316,25 @@ https://fpgasoftware.intel.com/eula.
 ;          |Counting_to_10:Counting_to_10_1|         ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|Counting_to_10:Counting_to_10_1                                        ; Counting_to_10    ; work         ;
 ;          |One_ms_Timer:One_ms_Timer_1|             ; 22 (22)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|One_ms_Timer:One_ms_Timer_1                                            ; One_ms_Timer      ; work         ;
 ;       |Shift_right:Shift_right_1|                  ; 6 (6)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|LED_Timer:LED_Timer1|Shift_right:Shift_right_1                                                                            ; Shift_right       ; work         ;
-;    |handler_top:handler_top1|                      ; 363 (0)             ; 219 (0)                   ; 2688              ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1                                                                                                  ; handler_top       ; work         ;
+;    |handler_top:handler_top1|                      ; 353 (0)             ; 219 (0)                   ; 2688              ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1                                                                                                  ; handler_top       ; work         ;
 ;       |RNG:RNG1|                                   ; 4 (4)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|RNG:RNG1                                                                                         ; RNG               ; work         ;
 ;       |WORDROM:WORDROM1|                           ; 0 (0)               ; 0 (0)                     ; 2688              ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|WORDROM:WORDROM1                                                                                 ; WORDROM           ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 2688              ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component                                                 ; altsyncram        ; work         ;
 ;             |altsyncram_2jf1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 2688              ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated                  ; altsyncram_2jf1   ; work         ;
-;       |handler:handler1|                           ; 317 (317)           ; 154 (154)                 ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|handler:handler1                                                                                 ; handler           ; work         ;
-;       |scrambler_top:scrambler_top1|               ; 42 (0)              ; 57 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1                                                                     ; scrambler_top     ; work         ;
+;       |handler:handler1|                           ; 311 (311)           ; 154 (154)                 ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|handler:handler1                                                                                 ; handler           ; work         ;
+;       |scrambler_top:scrambler_top1|               ; 38 (0)              ; 57 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1                                                                     ; scrambler_top     ; work         ;
 ;          |RNG:RNG|                                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG                                                             ; RNG               ; work         ;
-;          |mod_top:mod_top1|                        ; 17 (0)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1                                                    ; mod_top           ; work         ;
+;          |mod_top:mod_top1|                        ; 14 (0)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1                                                    ; mod_top           ; work         ;
 ;             |mod:mod1|                             ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod:mod1                                           ; mod               ; work         ;
-;             |mod_checker:mod_checker1|             ; 6 (6)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1                           ; mod_checker       ; work         ;
-;          |scrambler_done:scrambler_done1|          ; 24 (0)              ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1                                      ; scrambler_done    ; work         ;
+;             |mod_checker:mod_checker1|             ; 3 (3)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod_checker:mod_checker1                           ; mod_checker       ; work         ;
+;          |scrambler_done:scrambler_done1|          ; 23 (0)              ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1                                      ; scrambler_done    ; work         ;
 ;             |scrambler:scrambler1|                 ; 20 (20)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1                 ; scrambler         ; work         ;
-;             |scrambler_checker:scrambler_checker1| ; 4 (4)               ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1 ; scrambler_checker ; work         ;
-;    |score_top:score_top1|                          ; 67 (0)              ; 52 (0)                    ; 64                ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1                                                                                                      ; score_top         ; work         ;
-;       |Scoring:Scoring1|                           ; 25 (25)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|Scoring:Scoring1                                                                                     ; Scoring           ; work         ;
-;       |UID_ROM:Score_ROM|                          ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM                                                                                    ; UID_ROM           ; work         ;
-;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component                                                    ; altsyncram        ; work         ;
-;             |altsyncram_shf1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated                     ; altsyncram_shf1   ; work         ;
+;             |scrambler_checker:scrambler_checker1| ; 3 (3)               ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler_checker:scrambler_checker1 ; scrambler_checker ; work         ;
+;    |score_top:score_top1|                          ; 67 (0)              ; 56 (0)                    ; 128               ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1                                                                                                      ; score_top         ; work         ;
+;       |Scoring:Scoring1|                           ; 25 (25)             ; 56 (56)                   ; 0                 ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|Scoring:Scoring1                                                                                     ; Scoring           ; work         ;
+;       |UID_ROM:Score_ROM|                          ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM                                                                                    ; UID_ROM           ; work         ;
+;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component                                                    ; altsyncram        ; work         ;
+;             |altsyncram_shf1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated                     ; altsyncram_shf1   ; work         ;
 ;       |dec_7seg:dec_7seg1|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|dec_7seg:dec_7seg1                                                                                   ; dec_7seg          ; work         ;
 ;       |dec_7seg:dec_7seg2|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|dec_7seg:dec_7seg2                                                                                   ; dec_7seg          ; work         ;
 ;       |dec_7seg:dec_7seg3|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|score_top:score_top1|dec_7seg:dec_7seg3                                                                                   ; dec_7seg          ; work         ;
@@ -339,14 +345,16 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                   ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
-; Name                                                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
-; handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 64           ; 48           ; --           ; --           ; 3072 ; WORDROM.hex ;
-; score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM    ; AUTO ; ROM  ; 32           ; 16           ; --           ; --           ; 512  ; UID_ROM.hex ;
-+---------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                            ;
++------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
+; Name                                                                                                                         ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
++------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
+; Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 32           ; 24           ; --           ; --           ; 768  ; PW_ROM.hex  ;
+; Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM    ; AUTO ; ROM  ; 32           ; 16           ; --           ; --           ; 512  ; UID_ROM.hex ;
+; handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated|ALTSYNCRAM          ; AUTO ; ROM  ; 64           ; 48           ; --           ; --           ; 3072 ; WORDROM.hex ;
+; score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM             ; AUTO ; ROM  ; 32           ; 16           ; --           ; --           ; 512  ; UID_ROM.hex ;
++------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
 
 
 Encoding Type:  One-Hot
@@ -413,29 +421,29 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------+
 ; State Machine - |top_module|score_top:score_top1|Scoring:Scoring1|State              ;
 +----------------+------------+----------------+-------------+------------+------------+
-; Name           ; State.WAIT ; State.RETRIEVE ; State.CHECK ; State.INIT ; State.SEND ;
+; Name           ; State.SEND ; State.RETRIEVE ; State.CHECK ; State.INIT ; State.WAIT ;
 +----------------+------------+----------------+-------------+------------+------------+
 ; State.INIT     ; 0          ; 0              ; 0           ; 0          ; 0          ;
 ; State.CHECK    ; 0          ; 0              ; 1           ; 1          ; 0          ;
 ; State.RETRIEVE ; 0          ; 1              ; 0           ; 1          ; 0          ;
-; State.SEND     ; 0          ; 0              ; 0           ; 1          ; 1          ;
-; State.WAIT     ; 1          ; 0              ; 0           ; 1          ; 0          ;
+; State.SEND     ; 1          ; 0              ; 0           ; 1          ; 0          ;
+; State.WAIT     ; 0          ; 0              ; 0           ; 1          ; 1          ;
 +----------------+------------+----------------+-------------+------------+------------+
 
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------+
 ; State Machine - |top_module|GameController:GameController1|State                                        ;
-+----------------+----------------+--------------+----------------+------------+-------------+------------+
-; Name           ; State.TOPSCORE ; State.LOGOUT ; State.GAMEOVER ; State.GAME ; State.SETUP ; State.INIT ;
-+----------------+----------------+--------------+----------------+------------+-------------+------------+
-; State.INIT     ; 0              ; 0            ; 0              ; 0          ; 0           ; 0          ;
-; State.SETUP    ; 0              ; 0            ; 0              ; 0          ; 1           ; 1          ;
-; State.GAME     ; 0              ; 0            ; 0              ; 1          ; 0           ; 1          ;
-; State.GAMEOVER ; 0              ; 0            ; 1              ; 0          ; 0           ; 1          ;
-; State.LOGOUT   ; 0              ; 1            ; 0              ; 0          ; 0           ; 1          ;
-; State.TOPSCORE ; 1              ; 0            ; 0              ; 0          ; 0           ; 1          ;
-+----------------+----------------+--------------+----------------+------------+-------------+------------+
++----------------+----------------+------------+----------------+------------+-------------+--------------+
+; Name           ; State.TOPSCORE ; State.INIT ; State.GAMEOVER ; State.GAME ; State.SETUP ; State.LOGOUT ;
++----------------+----------------+------------+----------------+------------+-------------+--------------+
+; State.LOGOUT   ; 0              ; 0          ; 0              ; 0          ; 0           ; 0            ;
+; State.SETUP    ; 0              ; 0          ; 0              ; 0          ; 1           ; 1            ;
+; State.GAME     ; 0              ; 0          ; 0              ; 1          ; 0           ; 1            ;
+; State.GAMEOVER ; 0              ; 0          ; 1              ; 0          ; 0           ; 1            ;
+; State.INIT     ; 0              ; 1          ; 0              ; 0          ; 0           ; 1            ;
+; State.TOPSCORE ; 1              ; 0          ; 0              ; 0          ; 0           ; 1            ;
++----------------+----------------+------------+----------------+------------+-------------+--------------+
 
 
 Encoding Type:  One-Hot
@@ -524,16 +532,10 @@ Encoding Type:  One-Hot
 ; Register name                                                                                           ; Reason for Removal                                                                  ;
 +---------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 ; score_top:score_top1|Scoring:Scoring1|intIDout[3,4]                                                     ; Stuck at GND due to stuck port data_in                                              ;
-; GameController:GameController1|pIDout[2]                                                                ; Stuck at GND due to stuck port data_in                                              ;
-; GameController:GameController1|pIDout[1]                                                                ; Stuck at VCC due to stuck port data_in                                              ;
-; GameController:GameController1|pIDout[0]                                                                ; Stuck at GND due to stuck port data_in                                              ;
-; GameController:GameController1|isGuestOut                                                               ; Stuck at GND due to stuck port data_in                                              ;
 ; GameController:GameController1|modeDisp[2]                                                              ; Stuck at VCC due to stuck port data_in                                              ;
 ; GameController:GameController1|modeDisp[3]                                                              ; Stuck at GND due to stuck port data_in                                              ;
-; score_top:score_top1|Scoring:Scoring1|topIntID[2]                                                       ; Merged with score_top:score_top1|Scoring:Scoring1|topIntID[0]                       ;
 ; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[4]                                 ; Merged with Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[3] ;
 ; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[4]                                    ; Merged with Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[3]    ;
-; score_top:score_top1|Scoring:Scoring1|intIDout[2]                                                       ; Merged with score_top:score_top1|Scoring:Scoring1|intIDout[0]                       ;
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|count_out[0]                              ; Merged with handler_top:handler_top1|RNG:RNG1|count_out[0]                          ;
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|count_out[1]                              ; Merged with handler_top:handler_top1|RNG:RNG1|count_out[1]                          ;
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|count_out[2]                              ; Merged with handler_top:handler_top1|RNG:RNG1|count_out[2]                          ;
@@ -542,8 +544,6 @@ Encoding Type:  One-Hot
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|LFSR[1]                                   ; Merged with handler_top:handler_top1|RNG:RNG1|LFSR[1]                               ;
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|LFSR[2]                                   ; Merged with handler_top:handler_top1|RNG:RNG1|LFSR[2]                               ;
 ; handler_top:handler_top1|scrambler_top:scrambler_top1|RNG:RNG|LFSR[3]                                   ; Merged with handler_top:handler_top1|RNG:RNG1|LFSR[3]                               ;
-; score_top:score_top1|Scoring:Scoring1|topIntID[0]                                                       ; Stuck at GND due to stuck port data_in                                              ;
-; score_top:score_top1|Scoring:Scoring1|intIDout[0]                                                       ; Stuck at GND due to stuck port data_in                                              ;
 ; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[3]                                 ; Stuck at GND due to stuck port data_in                                              ;
 ; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[3]                                    ; Stuck at GND due to stuck port data_in                                              ;
 ; handler_top:handler_top1|handler:handler1|state~17                                                      ; Lost fanout                                                                         ;
@@ -556,8 +556,8 @@ Encoding Type:  One-Hot
 ; score_top:score_top1|Scoring:Scoring1|nextState~2                                                       ; Lost fanout                                                                         ;
 ; score_top:score_top1|Scoring:Scoring1|nextState~3                                                       ; Lost fanout                                                                         ;
 ; score_top:score_top1|Scoring:Scoring1|nextState~4                                                       ; Lost fanout                                                                         ;
+; score_top:score_top1|Scoring:Scoring1|State~10                                                          ; Lost fanout                                                                         ;
 ; score_top:score_top1|Scoring:Scoring1|State~11                                                          ; Lost fanout                                                                         ;
-; score_top:score_top1|Scoring:Scoring1|State~12                                                          ; Lost fanout                                                                         ;
 ; GameController:GameController1|State~9                                                                  ; Lost fanout                                                                         ;
 ; GameController:GameController1|State~10                                                                 ; Lost fanout                                                                         ;
 ; GameController:GameController1|State~11                                                                 ; Lost fanout                                                                         ;
@@ -571,112 +571,11 @@ Encoding Type:  One-Hot
 ; Authentication:Authentication1|ID_Checking:UserEnter|State~4                                            ; Lost fanout                                                                         ;
 ; Authentication:Authentication1|ID_Checking:UserEnter|State~5                                            ; Lost fanout                                                                         ;
 ; handler_top:handler_top1|handler:handler1|state.PreDisplay                                              ; Stuck at GND due to stuck port data_in                                              ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|count[0,1]                                     ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|matchID                                            ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|attempt[0,1]                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|data_PW_ROM[0..23]                             ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[0..23]                                      ; Lost fanout                                                                         ;
-; GameController:GameController1|logOut                                                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|log_out                                        ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|attempt[0,1]                                       ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[0..15]                                ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|UID[0..15]                                         ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[0..2]                              ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[0..2]                                 ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|intID[0..2]                                        ; Lost fanout                                                                         ;
 ; ButtonShaper:ChangeShaper|State.WAIT                                                                    ; Lost fanout                                                                         ;
 ; ButtonShaper:StartShaper|State.WAIT                                                                     ; Lost fanout                                                                         ;
 ; ButtonShaper:PassShaper|State.WAIT                                                                      ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.INIT                                     ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FIRST                                    ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.SECOND                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.THIRD                                    ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FOURTH                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FIFTH                                    ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.SIXTH                                    ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_FETCHWD                              ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CYCLE1                               ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CYCLE2                               ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CATCH                                ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.COMPARE                                  ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.PASSED                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State.WAIT_LOGOUT                              ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.INIT                                         ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.FIRST                                        ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.SECOND                                       ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.THIRD                                        ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.FOURTH                                       ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_FETCHWD                                  ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CYCLE1                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CYCLE2                                   ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CATCH                                    ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.COMPARE                                      ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.CHECKSTATUS                                  ; Lost fanout                                                                         ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State.CHECKGUEST                                   ; Lost fanout                                                                         ;
-; Total Number of Removed Registers = 176                                                                 ;                                                                                     ;
+; Total Number of Removed Registers = 44                                                                  ;                                                                                     ;
 +---------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                       ;
-+-------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name                                                           ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+-------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State~16       ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|count[0],          ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|count[1],          ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|attempt[0],        ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|attempt[1],        ;
-;                                                                         ;                           ; GameController:GameController1|logOut,                                      ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.INIT,        ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.SIXTH,       ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CYCLE1,  ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CATCH,   ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.COMPARE,     ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.WAIT_LOGOUT  ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[3] ; Stuck at GND              ; Authentication:Authentication1|ID_Checking:UserEnter|matchID,               ;
-;                                                                         ; due to stuck port data_in ; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[0],    ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[1],    ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[2],    ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|intID[0],              ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|intID[1],              ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|intID[2],              ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_FETCHWD, ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.INIT             ;
-; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[3]    ; Stuck at GND              ; Authentication:Authentication1|ID_Checking:UserEnter|attempt[1],            ;
-;                                                                         ; due to stuck port data_in ; Authentication:Authentication1|ID_Checking:UserEnter|attempt[0],            ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[7],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[8],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[9],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[0],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[1],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[2],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.CHECKSTATUS      ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State~2            ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|log_out,           ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[14],      ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[15],      ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.PASSED,      ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CYCLE1,      ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CATCH,       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.COMPARE,         ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.CHECKGUEST       ;
-; GameController:GameController1|pIDout[0]                                ; Stuck at GND              ; score_top:score_top1|Scoring:Scoring1|topIntID[0],                          ;
-;                                                                         ; due to stuck port data_in ; score_top:score_top1|Scoring:Scoring1|intIDout[0]                           ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State~18       ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|data_PW_ROM[23],   ;
-;                                                                         ;                           ; Authentication:Authentication1|PW_Checking:PasswordEnter|data_PW_ROM[22]    ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State~4            ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|data_UID_ROM[6],       ;
-;                                                                         ;                           ; Authentication:Authentication1|ID_Checking:UserEnter|State.FOURTH           ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|State~17       ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.ROM_CYCLE2   ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State~3            ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_FETCHWD      ;
-; Authentication:Authentication1|ID_Checking:UserEnter|State~5            ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|State.ROM_CYCLE2       ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[23]         ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FIRST        ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[19]         ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.SECOND       ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[15]         ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.THIRD        ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[11]         ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FOURTH       ;
-; Authentication:Authentication1|PW_Checking:PasswordEnter|PW[7]          ; Lost Fanouts              ; Authentication:Authentication1|PW_Checking:PasswordEnter|State.FIFTH        ;
-; Authentication:Authentication1|ID_Checking:UserEnter|UID[15]            ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|State.FIRST            ;
-; Authentication:Authentication1|ID_Checking:UserEnter|UID[11]            ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|State.SECOND           ;
-; Authentication:Authentication1|ID_Checking:UserEnter|UID[7]             ; Lost Fanouts              ; Authentication:Authentication1|ID_Checking:UserEnter|State.THIRD            ;
-+-------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -684,12 +583,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 397   ;
-; Number of registers using Synchronous Clear  ; 64    ;
+; Total registers                              ; 535   ;
+; Number of registers using Synchronous Clear  ; 186   ;
 ; Number of registers using Synchronous Load   ; 34    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 296   ;
+; Number of registers using Clock Enable       ; 367   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -699,53 +598,54 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_module|score_top:score_top1|Scoring:Scoring1|topScore[3]                                                                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|ROM_addr[4]                                                               ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp1[0]                                                                                      ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp2[5]                                                                                      ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp0[0]                                                                                      ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|Shift_right:Shift_right_1|Register[3]                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|Counting_to_10:Counting_to_10_1|Count[0]                                                       ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |top_module|score_top:score_top1|Scoring:Scoring1|topScore[7]                                                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|ROM_addr[5]                                                               ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp1[4]                                                                                      ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp3[3]                                                                                      ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp0[4]                                                                                      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|Shift_right:Shift_right_1|Register[7]                                                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|Counting_to_10:Counting_to_10_1|Count[3]                                                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|Counting_to_10:Counting_to_10_1|Count[2]                         ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|Counting_to_100:Counting_to_100_1|Count[3]                       ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|One_ms_Timer:One_ms_Timer_1|Interal_cnt[3]                       ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|Counting_to_100:Counting_to_100_1|Count[0]                       ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top_module|LED_Timer:LED_Timer1|One_sec_Timer:One_sec_Timer_1|One_ms_Timer:One_ms_Timer_1|Interal_cnt[1]                       ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|Disp_Mux:Multiplexer2|Disp0[6]                                                                                      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|addr_PW_ROM[0]                                             ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|data_PW_ROM[7]                                             ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|data_PW_ROM[22]                                            ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_module|score_top:score_top1|Scoring:Scoring1|scoreOnesOut[2]                                                               ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |top_module|GameController:GameController1|lettNum[1]                                                                           ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index6[2] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index1[2] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index3[1] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index6[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index2[2] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index3[0] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[19]                                                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[15]                                                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[11]                                                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[6]                                                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[10]                                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[7]                                                      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[3]                                                      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|PW[20]                                                     ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|count[1]                                                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|isGuest_ctrl                                               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|PW_Checking:PasswordEnter|attempt[1]                                                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|mod_top:mod_top1|mod:mod1|random_number[3]                    ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_module|Authentication:Authentication1|ID_Checking:UserEnter|addr_UID_ROM[2]                                                ;
 ; 12:1               ; 3 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index2[0] ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top_module|handler_top:handler_top1|scrambler_top:scrambler_top1|scrambler_done:scrambler_done1|scrambler:scrambler1|index4[1] ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[6][0]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[5][6]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[4][0]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[3][4]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[2][6]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[1][5]                                                             ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[0][5]                                                             ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[6][6]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[5][0]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[4][3]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[3][3]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[2][0]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[1][0]                                                             ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 35 LEs               ; 42 LEs                 ; Yes        ; |top_module|handler_top:handler_top1|handler:handler1|display[0][1]                                                             ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_module|Authentication:Authentication1|ID_Checking:UserEnter|State                                                          ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_module|Authentication:Authentication1|ID_Checking:UserEnter|intID                                                          ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_module|GameController:GameController1|scoreOnes                                                                            ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_module|handler_top:handler_top1|handler:handler1|Mux6                                                                      ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_module|handler_top:handler_top1|handler:handler1|Mux2                                                                      ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_module|handler_top:handler_top1|handler:handler1|Mux9                                                                      ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |top_module|handler_top:handler_top1|handler:handler1|state                                                                     ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_module|score_top:score_top1|Scoring:Scoring1|State                                                                         ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_module|handler_top:handler_top1|handler:handler1|state                                                                     ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_module|score_top:score_top1|Scoring:Scoring1|State                                                                         ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |top_module|GameController:GameController1|State                                                                                ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |top_module|GameController:GameController1|State                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1008,10 +908,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                                      ;
 +----------------+-------+-----------------------------------------------------------+
 ; INIT           ; 0     ; Signed Integer                                            ;
-; CHECK          ; 2     ; Signed Integer                                            ;
-; RETRIEVE       ; 4     ; Signed Integer                                            ;
-; SEND           ; 5     ; Signed Integer                                            ;
-; WAIT           ; 6     ; Signed Integer                                            ;
+; CHECK          ; 1     ; Signed Integer                                            ;
+; RETRIEVE       ; 2     ; Signed Integer                                            ;
+; SEND           ; 3     ; Signed Integer                                            ;
+; WAIT           ; 4     ; Signed Integer                                            ;
 +----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1278,16 +1178,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "LED_Mux:Multiplexer1" ;
-+---------------+-------+----------+---------------+
-; Port          ; Type  ; Severity ; Details       ;
-+---------------+-------+----------+---------------+
-; authSig[9..8] ; Input ; Info     ; Stuck at VCC  ;
-; authSig[7..0] ; Input ; Info     ; Stuck at GND  ;
-+---------------+-------+----------+---------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "handler_top:handler_top1|RNG:RNG1"                                                  ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1306,20 +1196,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GameController:GameController1"                                                                                                                                                         ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; logOn     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; pIDin     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (3 bits) it drives.  The 29 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; pIDin[2]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; pIDin[1]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; pIDin[0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; isGuestIn ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; scramPls  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; flipPls   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GameController:GameController1"                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; scramPls ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flipPls  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
@@ -1331,47 +1215,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Authentication:Authentication1"                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; log_in_ctrl  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; isGuest_ctrl ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; intID_ctrl   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; status       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 397                         ;
-;     ENA               ; 216                         ;
-;     ENA SCLR          ; 49                          ;
+; arriav_ff             ; 535                         ;
+;     ENA               ; 262                         ;
+;     ENA SCLR          ; 74                          ;
 ;     ENA SLD           ; 31                          ;
-;     SCLR              ; 15                          ;
+;     SCLR              ; 112                         ;
 ;     SLD               ; 3                           ;
-;     plain             ; 83                          ;
-; arriav_lcell_comb     ; 580                         ;
+;     plain             ; 53                          ;
+; arriav_lcell_comb     ; 709                         ;
 ;     arith             ; 23                          ;
 ;         1 data inputs ; 23                          ;
-;     extend            ; 45                          ;
-;         7 data inputs ; 45                          ;
-;     normal            ; 512                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 71                          ;
-;         4 data inputs ; 109                         ;
-;         5 data inputs ; 116                         ;
-;         6 data inputs ; 173                         ;
+;     extend            ; 47                          ;
+;         7 data inputs ; 47                          ;
+;     normal            ; 639                         ;
+;         2 data inputs ; 80                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 108                         ;
+;         5 data inputs ; 134                         ;
+;         6 data inputs ; 235                         ;
 ; boundary_port         ; 67                          ;
-; stratixv_ram_block    ; 58                          ;
+; stratixv_ram_block    ; 98                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.15                        ;
+; Average LUT depth     ; 2.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1390,7 +1261,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 10 05:22:47 2021
+    Info: Processing started: Mon May 10 06:11:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_module -c top_module
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1515,9 +1386,9 @@ Info (12128): Elaborating entity "ButtonShaper" for hierarchy "ButtonShaper:Pass
 Info (12128): Elaborating entity "GameController" for hierarchy "GameController:GameController1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 32
 Warning (10230): Verilog HDL assignment warning at GameController.v(39): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 39
 Warning (10230): Verilog HDL assignment warning at GameController.v(49): truncated value with size 32 to match size of target (2) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 49
-Warning (10230): Verilog HDL assignment warning at GameController.v(68): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 68
-Warning (10230): Verilog HDL assignment warning at GameController.v(71): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 71
-Warning (10230): Verilog HDL assignment warning at GameController.v(91): truncated value with size 32 to match size of target (1) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 91
+Warning (10230): Verilog HDL assignment warning at GameController.v(67): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 67
+Warning (10230): Verilog HDL assignment warning at GameController.v(70): truncated value with size 32 to match size of target (4) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 70
+Warning (10230): Verilog HDL assignment warning at GameController.v(90): truncated value with size 32 to match size of target (1) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/GameController.v Line: 90
 Info (12128): Elaborating entity "score_top" for hierarchy "score_top:score_top1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 35
 Info (12128): Elaborating entity "Scoring" for hierarchy "score_top:score_top1|Scoring:Scoring1" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Score_top.v Line: 15
 Warning (10230): Verilog HDL assignment warning at Scoring.v(75): truncated value with size 32 to match size of target (3) File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/Scoring.v Line: 75
@@ -1575,70 +1446,25 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated|q_a[31]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_2jf1.tdf Line: 717
         Warning (14320): Synthesized away node "handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated|q_a[39]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_2jf1.tdf Line: 893
         Warning (14320): Synthesized away node "handler_top:handler_top1|WORDROM:WORDROM1|altsyncram:altsyncram_component|altsyncram_2jf1:auto_generated|q_a[47]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_2jf1.tdf Line: 1069
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[23]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 541
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[22]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 519
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[21]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 497
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[20]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 475
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[19]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 453
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[18]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 431
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[17]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 409
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[16]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 387
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[15]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 365
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[14]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 343
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[13]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 321
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[12]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 299
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[11]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 277
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[10]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 255
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[9]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 233
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[8]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 211
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[7]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 189
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[6]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 167
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[5]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 145
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[4]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 123
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[3]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 101
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[2]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 79
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[1]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 57
-        Warning (14320): Synthesized away node "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|q_a[0]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 35
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[6]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 167
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[7]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 189
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[8]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 211
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[9]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 233
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[10]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 255
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[11]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 277
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[12]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 299
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[13]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 321
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[14]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 343
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[15]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 365
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[4]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 123
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[3]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 101
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[2]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 79
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[1]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 57
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[0]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 35
-        Warning (14320): Synthesized away node "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|q_a[5]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 145
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 151 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 32
+Info (17049): 27 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "score_top:score_top1|UID_ROM:Score_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 32
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "Authentication:Authentication1|PW_ROM:Password_ROM|altsyncram:altsyncram_component|altsyncram_0ff1:auto_generated|ALTSYNCRAM" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_0ff1.tdf Line: 32
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "Authentication:Authentication1|UID_ROM:User_ROM|altsyncram:altsyncram_component|altsyncram_shf1:auto_generated|ALTSYNCRAM" File: C:/Users/javgg/Documents/GitHub/ADD_Project/syn/db/altsyncram_shf1.tdf Line: 32
 Info (144001): Generated suppressed messages file C:/Users/javgg/Documents/GitHub/ADD_Project/syn/output_files/top_module.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Pass_digit[3]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 6
-    Warning (15610): No output dependent on input pin "Pass_digit[2]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 6
-    Warning (15610): No output dependent on input pin "Pass_digit[1]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 6
-    Warning (15610): No output dependent on input pin "Pass_digit[0]" File: C:/Users/javgg/Documents/GitHub/ADD_Project/src/top_module.v Line: 6
-Info (21057): Implemented 884 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1106 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 759 logic cells
-    Info (21064): Implemented 58 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Mon May 10 05:22:55 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 941 logic cells
+    Info (21064): Implemented 98 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon May 10 06:11:24 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+

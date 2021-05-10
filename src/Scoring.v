@@ -12,7 +12,7 @@ module Scoring(controlSig, isGuest, intIDin, scoreOnes, scoreTens, topID, intIDo
 	reg [2:0] Cycle, topIntID;
 	reg [7:0] score, topScore;
 	reg [2:0] State, nextState;
-	parameter INIT = 0, CHECK = 2, RETRIEVE = 4, SEND = 5, WAIT = 6;
+	parameter INIT = 0, CHECK = 1, RETRIEVE = 2, SEND = 3, WAIT = 4;
 
 	always @(posedge clk) begin
 		if (rst==1'b0) begin

@@ -17,7 +17,7 @@ module GameController(pwdPls, logOn, pIDin, isGuestIn, startPls, loadPls, indIn1
 
 	always @(posedge clk) begin
 		if (rst == 1'b0)
-			State <= INIT;
+			State <= LOGOUT;
 		else begin
 			case(State)
 				INIT: begin
